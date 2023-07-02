@@ -1,26 +1,21 @@
-export default function Header({ title }) {
-  return (
-    <>
-      <h1 className="title">{title}</h1>
-      <p>
-        Hi 👋! This template gives you a pinco pollo{" "}
-        <a href="https://nextjs.org/">Next.js</a> app with the scaffolding for{" "}
-        <a href="https://www.netlify.com/products/functions/">
-          Netlify Functions
-        </a>
-        , <a href="https://www.netlify.com/products/forms/">Forms</a>, and{" "}
-        <a href="https://docs.netlify.com/routing/redirects/">Redirects</a>. Our
-        aim was to give you the code you would need to hit the ground running
-        with a few fun features.
-      </p>
+import React, { useEffect } from "react";
 
-      <p>
-        You can find the code for this project on GitHub at{" "}
-        <a href="https://github.com/netlify-templates/nextjs-toolbox">
-          https://github.com/netlify-templates/nextjs-toolbox
-        </a>
-        ! Happy coding!
-      </p>
-    </>
+export default function Header() {
+  useEffect(() => {
+    const textElement = document.querySelector(".headertext") as HTMLElement;
+    if (textElement) {
+      textElement.style.opacity = "1";
+    }
+    const imageElement = document.querySelector(".header") as HTMLElement;
+    if (imageElement) {
+     imageElement.style.opacity = "1";
+    }
+
+  }, []);
+
+  return (
+    <div className="header">
+      <div className="headertext">The best lessons start here</div>
+    </div>
   );
 }
