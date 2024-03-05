@@ -38,12 +38,15 @@ export default function Home() {
 
       <div className="fixed-bg bg-2 ">
         <h4>when?</h4>
-        <h1>20 - 04 - 2024</h1>
+        <h1>
+          3pm <br />
+          20-04-2024
+        </h1>
       </div>
 
       <div className="fixed-bg bg-3">
         <h4>where?</h4>
-        <h1>3pm Palazzo Gran Guardia</h1>
+        <h1>Palazzo Gran Guardia</h1>
       </div>
 
       <div className="fixed-bg bg-4">
@@ -56,14 +59,48 @@ export default function Home() {
       </div>
 
       <div className="fixed-bg bg-6">
-        <h1>After - Sunday</h1>
+        <h1>
+          After Party <br />
+          Chillout <br /> Sunday
+        </h1>
+        <h4>location to be announced</h4>
+      </div>
+
+      <div className="fixed-bg bg-7">
+        <h4>
+          how about the wedding gift?
+          <br />
+          <div className="gold">
+            DONT'T BUY STUFF
+            <br />
+            <a href="https://www.gofundme.com"> support our gofundme</a>
+          </div>
+          come on we wonna reach 10000 euros
+        </h4>
       </div>
 
       <div className="scroll-bg">
-        Practical info:
-        <p>- meet at 3pm at Palazzo della Gran Guardia, Padova [map]</p>
-        <p>- dinner</p>
-        what do we need to say here zoul?
+        <strong>FAQQQSS</strong>
+        <p></p>
+        <strong>So what I have to do?</strong>
+        <p>
+          meet at 3pm at{" "}
+          <a href="https://maps.app.goo.gl/X7K3hKa1ypiKuU549">
+            Palazzo della Gran Guardia, Padova
+          </a>
+        </p>
+        <p>
+          <strong>Dinner ?</strong>
+        </p>
+        don't worry we got you covered
+        <p>
+          <strong>How about hotels transportations and stuff?</strong>
+        </p>
+        please fill the form below and you gonna know
+        <p>
+          <strong>I want to buy you a wedding Gift!</strong>
+        </p>
+        don't worry we got you covered
       </div>
 
       <div className="scroll-bg theform">

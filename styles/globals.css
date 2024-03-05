@@ -13,6 +13,7 @@ body {
   overflow-x: hidden;
   margin: 0; /* Reset default margin */
   padding: 0; /* Reset default padding */
+  background: #fff8e7;
 }
 
 .wrapper {
@@ -45,7 +46,7 @@ body {
   text-align: center;
   font-weight: bold;
   color: white;
-  font-size: 3em;
+  font-size: 2.5em;
   margin-left: 60px;
   margin-right: 60px;
   z-index: 2;
@@ -65,7 +66,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 100px;
+  padding: 10px 30px;
 }
 
 .theform {
@@ -77,7 +78,7 @@ h1 {
   text-align: center;
   font-weight: bold;
   color: white;
-  font-size: 5em;
+  font-size: 4em;
   z-index: 2;
   text-shadow:
     0 0 0.4em gold,
@@ -96,6 +97,15 @@ h4 {
     0 0 0.4em red,
     2px 2px 0.1em black,
     0 0 0.4em blue,
+    0 0 0.5em gold;
+}
+
+.gold {
+  color: white;
+  text-shadow:
+    0 0 0.4em gold,
+    2px 2px 0.1em black,
+    0 0 0.4em gold,
     0 0 0.5em gold;
 }
 
@@ -122,6 +132,10 @@ h4 {
 
 .bg-6 {
   background-image: url("/looking-away.jpg");
+}
+
+.bg-7 {
+  background-image: url("/open-mouth.jpg");
 }
 
 .scrolling-image {

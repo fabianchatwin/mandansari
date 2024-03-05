@@ -124,7 +124,7 @@ export default function FeedbackForm() {
       <br />
       <label htmlFor="name">What is the magic word?</label>
       <input
-        id="name"
+        id="magicword"
         className={styles["form-field"]}
         type="text"
         name="magicword"
