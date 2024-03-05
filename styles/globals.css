@@ -111,6 +111,11 @@ h1 {
   animation: scrollImage 10s linear infinite;
 }
 
+.ita {
+  color: maroon;
+  font-style: italic;
+}
+
 @keyframes scrollImage {
   0% {
     transform: translateX(0%);

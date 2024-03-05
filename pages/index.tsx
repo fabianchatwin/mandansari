@@ -82,7 +82,15 @@ export default function Home() {
       <div className="scroll-bg">Practical info goe here la</div>
 
       <div className="scroll-bg">
-        <h3>Make the test fill the whatever</h3>
+        <h3>
+          Please fill this form to confirm your participation! If you are
+          family, send only one form for all the family.
+          <div className="ita">
+            Per favore compila questo form di partecipazione! Se sei una
+            famiglia, compila un solo form per tutta la tua famiglia!
+          </div>
+        </h3>
+
         <FeedbackForm />
       </div>
     </div>
