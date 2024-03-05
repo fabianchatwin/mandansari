@@ -49,34 +49,89 @@ export default function FeedbackForm() {
         name="whatsapp"
       />
       <label htmlFor="car">
-        This is the most important question. <br />
-        It is really important for our internal planning! <br />
-        Do you have a car or do you want to drive your car
+        The most important question!
+        <br />
+        Really important for our planning! <br />
+        Do you have a car or do you want to drive your car?
+        <br />
+        <div className="ita">
+          La domanda più importante!
+          <br />
+          Veramente importante per organizzarci! <br />
+          Hai una macchina o preferisci guidare la tua macchina?
+        </div>
       </label>
       <br />
       <input type="radio" id="car" name="car" value="yescar" required /> Yes! I
-      am a safe driver!
+      am a safe driver!{" "}
+      <div className="ita"> Si! Sono un conducente sicuro! </div>
       <br />
       <input type="radio" id="car" name="car" value="nocar" /> I don't have a
-      car
+      car <div className="ita"> No, non ho una macchina </div>
       <br />
-      <input type="radio" id="car" name="car" value="drinkcar" /> I want to
-      drink!
+      <input type="radio" id="car" name="car" value="drinkcar" /> WTF are you
+      talking about? I want to drink! No drive!{" "}
+      <div className="ita">
+        {" "}
+        Ma di che capperi stai parlando? Io voglio bere! No guidare!{" "}
+      </div>
       <br />
       <br />
-      <label htmlFor="sliderInput">Select a step:</label>
+      <label for="checkboxInput">I have food requests</label>
+      <br />
       <input
-        type="range"
-        id="sliderInput"
-        name="sliderInput"
-        min="1"
-        max="5"
-        step="1"
-        value="1"
+        type="checkbox"
+        id="vegetarian"
+        name="foodRequest"
+        value="vegetarian"
+      />
+      Vegetarian
+      <br />
+      <input type="checkbox" id="vegan" name="foodRequest" value="vegan" />
+      Vegan
+      <br />
+      <input
+        type="checkbox"
+        id="gluten-free"
+        name="foodRequest"
+        value="gluten-free"
+      />
+      Gluten-free <br />
+      <input
+        type="checkbox"
+        id="dairy-free"
+        name="foodRequest"
+        value="dairy-free"
+      />
+      Dairy-free <br />
+      <input type="checkbox" id="halal" name="foodRequest" value="halal" />
+      Halal <br />
+      <input
+        type="checkbox"
+        id="alchool-based"
+        name="foodRequest"
+        value="alchool-based"
+      />
+      Alchool Based
+      <br />
+      <br />
+      <br />
+      <label for="checkboxInput">Do you need a hotel recommendation?</label>
+      <br />
+      <input type="checkbox" id="hotel" name="otherRequests" value="hotel" />
+      Yes guys! Please give me a hotel recommendation
+      <br />
+      <br />
+      <label htmlFor="name">What is the magic word?</label>
+      <input
+        id="name"
+        className={styles["form-field"]}
+        type="text"
+        name="magicword"
+        required
       />
       <br />
-      <br />
-      <label htmlFor="feedback">What is your feedback?</label>
+      <label htmlFor="feedback">Anything else you want us to know?</label>
       <textarea
         id="feedback"
         className={styles["form-field"]}
@@ -85,7 +140,7 @@ export default function FeedbackForm() {
         required
       ></textarea>
       <button className={styles.button} type="submit">
-        Submit
+        LETS GO!
       </button>
     </form>
   );

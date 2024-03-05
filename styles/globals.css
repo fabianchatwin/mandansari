@@ -21,6 +21,8 @@ body {
   line-height: 1.5;
   word-spacing: 4px;
   letter-spacing: 1px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .fixed-bg {
@@ -30,11 +32,13 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
   transition: opacity 20s ease;
+  flex-direction: column;
 }
 
 .title {
@@ -64,18 +68,34 @@ body {
   padding: 10px 100px;
 }
 
+.theform {
+  height: 2000px;
+  background-color: lightgoldenrodyellow;
+}
+
 h1 {
   text-align: center;
   font-weight: bold;
   color: white;
   font-size: 5em;
-  margin-left: 60px;
-  margin-right: 60px;
   z-index: 2;
   text-shadow:
     0 0 0.4em gold,
     2px 2px 0.1em black,
     0 0 0.4em gold,
+    0 0 0.5em gold;
+}
+
+h4 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 3em;
+  z-index: 2;
+  text-shadow:
+    0 0 0.4em red,
+    2px 2px 0.1em black,
+    0 0 0.4em blue,
     0 0 0.5em gold;
 }
 
@@ -85,11 +105,11 @@ h1 {
 }
 
 .bg-2 {
-  background-image: url("/horiz-animation.gif");
+  background-image: url("/tajmahal.jpg");
 }
 
 .bg-3 {
-  background-image: url("/horiz1.jpg");
+  background-image: url("/granguardiapadova.jpg");
 }
 
 .bg-4 {

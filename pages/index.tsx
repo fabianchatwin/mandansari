@@ -25,63 +25,48 @@ export default function Home() {
 
       <div className="scroll-bg">
         <h2>
-          Eight years ago, amidst the bustling streets of Hong Kong, our love
-          story began. Fabian and Lia's paths crossed in this vibrant city, and
-          since then, they've been on an incredible journey filled with
-          laughter, adventures, and cherished moments.
+          Friends, here we are. Really. Yes.
+          <div className="ita">Amici, ci siamo. Veramente. Si. </div>
           <br></br>
           <br></br>
-          Now, as they embark on the next chapter of their lives together, they
-          invite you to join them in the romantic city of Padova, Italy, on the
-          picturesque date of April 20, 2024, to witness their union and
-          celebrate their love.
+          We are getting married!
+          <div className="ita">Ci sposiamo!</div>
           <br></br>
           <br></br>
-          Their love story is a testament to the magic of fate and the beauty of
-          finding your soulmate in unexpected places. From exploring new
-          cuisines to conquering new heights, Fabian and Lia have shared
-          countless memories that have strengthened their bond and filled their
-          hearts with joy.
-          <br></br>
-          <br></br>
-          As they exchange vows amidst the stunning landscapes of Padova,
-          surrounded by their beloved family and friends, they look forward to
-          creating even more unforgettable moments together. So mark your
-          calendars, dust off your dancing shoes, and get ready to celebrate
-          love, laughter, and happily ever after with Fabian and Lia!
-          <br></br>
-          <br></br>
-          Stay tuned for more updates and details as we countdown to the big
-          day. Let the wedding festivities begin!
-          <br></br>
-          <br></br>
-          With love, Fabian & Lia 💕
         </h2>
       </div>
 
       <div className="fixed-bg bg-2 ">
-        <h1>20 / 04 / 2024</h1>
+        <h4>when?</h4>
+        <h1>20 - 04 - 2024</h1>
       </div>
 
       <div className="fixed-bg bg-3">
-        <h1>3PM Palazzo Gran Guardia</h1>
+        <h4>where?</h4>
+        <h1>3pm Palazzo Gran Guardia</h1>
       </div>
 
       <div className="fixed-bg bg-4">
+        <h4>where is that</h4>
         <h1>Padova</h1>
       </div>
 
       <div className="fixed-bg bg-5">
-        <h1>Pric prac</h1>
+        <h1>Celebration and Dinner Party</h1>
       </div>
 
       <div className="fixed-bg bg-6">
-        <h1>Pric prac</h1>
+        <h1>After - Sunday</h1>
       </div>
 
-      <div className="scroll-bg">Practical info goe here la</div>
-
       <div className="scroll-bg">
+        Practical info:
+        <p>- meet at 3pm at Palazzo della Gran Guardia, Padova [map]</p>
+        <p>- dinner</p>
+        what do we need to say here zoul?
+      </div>
+
+      <div className="scroll-bg theform">
         <h3>
           Please fill this form to confirm your participation! If you are
           family, send only one form for all the family.
