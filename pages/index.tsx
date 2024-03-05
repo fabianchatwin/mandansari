@@ -1,15 +1,11 @@
-import Head from "next/head";
-import Header from "@components/Header";
-import Footer from "@components/Footer";
 import FeedbackForm from "@components/FeedbackForm";
-import JokeBlock from "@components/JokeBlock";
 import React, { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
     const imageElement = document.querySelector(".bg-1") as HTMLElement;
     if (imageElement) {
-      imageElement.style.opacity = "0.5";
+      imageElement.style.opacity = "1";
     }
     const titleElement = document.querySelector(".title") as HTMLElement;
     if (titleElement) {
@@ -19,32 +15,71 @@ export default function Home() {
 
   return (
     <div className="wrapper">
-      <div className="fixed-bg bg-1"></div>
-      <div className="title">LALA FAFA WTF</div>
-
-      <div className="scroll-bg">
-        <h3>
-          Welcome to my online English learning sessions! Whether you're a
-          beginner or an advanced learner, I'm here to guide you on your journey
-          to fluency. With tailored lessons and interactive activities, we'll
-          explore various aspects of English, including grammar, vocabulary,
-          speaking, listening, reading, and writing. Through engaging
-          conversations, role-plays, and exercises, you'll gain confidence in
-          using English in real-life situations. Together, we'll focus on
-          improving your pronunciation, sentence structure, and overall language
-          skills. I provide a supportive and encouraging learning environment
-          where you can ask questions and practice at your own pace. Let's
-          embark on this exciting language learning adventure together!
-        </h3>
+      <div className="fixed-bg bg-1">
+        <div className="title">
+          💕💍<br></br>
+          Welcome to Fabian and Lia's Wedding Celebration
+          <br></br>🎉🥂
+        </div>
       </div>
 
-      <div className="fixed-bg bg-2">
-        <h1>Fixed Background scrolling</h1>
+      <div className="scroll-bg">
+        <h2>
+          Eight years ago, amidst the bustling streets of Hong Kong, our love
+          story began. Fabian and Lia's paths crossed in this vibrant city, and
+          since then, they've been on an incredible journey filled with
+          laughter, adventures, and cherished moments.
+          <br></br>
+          <br></br>
+          Now, as they embark on the next chapter of their lives together, they
+          invite you to join them in the romantic city of Padova, Italy, on the
+          picturesque date of April 20, 2024, to witness their union and
+          celebrate their love.
+          <br></br>
+          <br></br>
+          Their love story is a testament to the magic of fate and the beauty of
+          finding your soulmate in unexpected places. From exploring new
+          cuisines to conquering new heights, Fabian and Lia have shared
+          countless memories that have strengthened their bond and filled their
+          hearts with joy.
+          <br></br>
+          <br></br>
+          As they exchange vows amidst the stunning landscapes of Padova,
+          surrounded by their beloved family and friends, they look forward to
+          creating even more unforgettable moments together. So mark your
+          calendars, dust off your dancing shoes, and get ready to celebrate
+          love, laughter, and happily ever after with Fabian and Lia!
+          <br></br>
+          <br></br>
+          Stay tuned for more updates and details as we countdown to the big
+          day. Let the wedding festivities begin!
+          <br></br>
+          <br></br>
+          With love, Fabian & Lia 💕
+        </h2>
+      </div>
+
+      <div className="fixed-bg bg-2 ">
+        <h1>20 / 04 / 2024</h1>
       </div>
 
       <div className="fixed-bg bg-3">
-        <h1>Fixed Background scrolling</h1>
+        <h1>3PM Palazzo Gran Guardia</h1>
       </div>
+
+      <div className="fixed-bg bg-4">
+        <h1>Padova</h1>
+      </div>
+
+      <div className="fixed-bg bg-5">
+        <h1>Pric prac</h1>
+      </div>
+
+      <div className="fixed-bg bg-6">
+        <h1>Pric prac</h1>
+      </div>
+
+      <div className="scroll-bg">Practical info goe here la</div>
 
       <div className="scroll-bg">
         <h3>Make the test fill the whatever</h3>

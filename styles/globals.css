@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 
-html, body, #__next {
+html,
+body,
+#__next {
   height: 100%;
   margin: 0;
   padding: 0;
+  color: #1e1e1e;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
 }
 
 .wrapper {
@@ -17,60 +26,116 @@ html, body, #__next {
 .fixed-bg {
   position: relative;
   height: 100%;
-  color: white;
+  width: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-
-.scroll-bg {
-  padding: 10px 70px;
-  color: #676767;
-  background-color: #0f0f0a;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
+  transition: opacity 20s ease;
 }
 
 .title {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  max-width: 600px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 3em;
+  margin-left: 60px;
+  margin-right: 60px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 5s ease;
+  text-shadow:
+    0 0 0.4em gold,
+    2px 2px 0.1em black,
+    0 0 0.4em gold,
+    0 0 0.5em gold;
+}
+
+.scroll-bg {
+  background-color: #fff8e7;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 86px;
+  padding: 10px 100px;
+}
+
+h1 {
+  text-align: center;
   font-weight: bold;
-  color: purple;
-  opacity: 0;
-  transition: opacity 10s ease;
+  color: white;
+  font-size: 5em;
+  margin-left: 60px;
+  margin-right: 60px;
   z-index: 2;
+  text-shadow:
+    0 0 0.4em gold,
+    2px 2px 0.1em black,
+    0 0 0.4em gold,
+    0 0 0.5em gold;
 }
 
 .bg-1 {
-  background-image: url("/lia-airport.jpg");
+  background-image: url("/hongkong1.jpg");
   opacity: 0;
-  transition: opacity 2s ease;
-  z-index: 1;
 }
-
-/* third section */
 
 .bg-2 {
-  background-image: url("/one.jpg");
+  background-image: url("/horiz-animation.gif");
 }
 
-/* fifth section */
-
 .bg-3 {
-  background-image: url("/two.jpg");
+  background-image: url("/horiz1.jpg");
+}
+
+.bg-4 {
+  background-image: url("/2017-august-penida .jpg");
+}
+
+.bg-5 {
+  background-image: url("/heart.jpg");
+}
+
+.bg-6 {
+  background-image: url("/looking-away.jpg");
+}
+
+.scrolling-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: scrollImage 10s linear infinite;
+}
+
+@keyframes scrollImage {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.zooming-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: zoomIn 10s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
