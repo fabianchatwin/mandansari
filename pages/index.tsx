@@ -83,23 +83,18 @@ export default function Home() {
         <strong>FAQQQSS</strong>
         <p></p>
         <strong>So what I have to do?</strong>
-        <p>
-          meet at 3pm at{" "}
-          <a href="https://maps.app.goo.gl/X7K3hKa1ypiKuU549">
-            Palazzo della Gran Guardia, Padova
-          </a>
-        </p>
-        <p>
-          <strong>Dinner ?</strong>
-        </p>
+        meet at 3pm at{" "}
+        <a href="https://maps.app.goo.gl/X7K3hKa1ypiKuU549">
+          Palazzo della Gran Guardia, Padova
+        </a>
+        <p></p>
+        <strong>Dinner ?</strong>
         don't worry we got you covered
-        <p>
-          <strong>How about hotels transportations and stuff?</strong>
-        </p>
+        <p></p>
+        <strong>How about hotels transportations and stuff?</strong>
         please fill the form below and you gonna know
-        <p>
-          <strong>I want to buy you a wedding Gift!</strong>
-        </p>
+        <p></p>
+        <strong>I want to buy you a wedding Gift!</strong>
         We thought a lot about this. Please contribute to our
         <a href="https://www.gofundme.com">gofundme campaign</a>.
       </div>

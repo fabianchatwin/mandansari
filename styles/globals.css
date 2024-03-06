@@ -162,9 +162,7 @@ h4 {
   color: maroon;
   font-style: italic;
 }
-.leftText {
-  text-align: left;
-}
+
 @keyframes scrollImage {
   0% {
     transform: translateX(0%);
