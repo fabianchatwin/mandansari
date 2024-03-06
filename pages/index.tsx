@@ -48,11 +48,7 @@ export default function Home() {
       <div className="fixed-bg bg-3">
         <h4>where?</h4>
         <h1>Palazzo Gran Guardia</h1>
-      </div>
-
-      <div className="fixed-bg bg-4">
-        <h4>where is that</h4>
-        <h1>Padova</h1>
+        <h4>Padova</h4>
       </div>
 
       <div className="fixed-bg bg-5">
@@ -69,34 +65,44 @@ export default function Home() {
 
       <div className="fixed-bg bg-7">
         <h4>
-          how about the wedding gift?
+          wedding gift?
           <br />
           <div className="gold">
-            DONT'T BUY STUFF
             <br />
-            <a href="https://www.gofundme.com"> support our gofundme</a>
+            <a href="https://gofund.me/b734c85c">click here</a>
           </div>
         </h4>
       </div>
 
       <div className="scroll-bg">
-        <strong>FAQQQSS</strong>
-        <p></p>
-        <strong>So what I have to do?</strong>
-        meet at 3pm at{" "}
-        <a href="https://maps.app.goo.gl/X7K3hKa1ypiKuU549">
-          Palazzo della Gran Guardia, Padova
-        </a>
-        <p></p>
-        <strong>Dinner ?</strong>
-        don't worry we got you covered
-        <p></p>
-        <strong>How about hotels transportations and stuff?</strong>
-        please fill the form below and you gonna know
-        <p></p>
-        <strong>I want to buy you a wedding Gift!</strong>
-        We thought a lot about this. Please contribute to our
-        <a href="https://www.gofundme.com">gofundme campaign</a>.
+        <div className="textLeft">
+          <strong>FAQQQSS</strong>
+          <p></p>
+          <strong>So what I have to do? /Ma quindi cosa devo fare?</strong>
+          fill the form below <div className="ita">compila il modulo sotto</div>
+          <p></p>
+          <strong>Dinner? / Cena? </strong>
+          don't worry we got you covered
+          <div className="ita">Tranqui ci pensiamo noi</div>
+          <p></p>
+          <strong>How about hotels transportations and stuff?</strong>
+          <strong>
+            <div className="ita">Ma hotel e spostamenti e balle varie?</div>
+          </strong>
+          just fill the form below
+          <div className="ita">tu compila il modulo</div>
+          <p></p>
+          <strong>I want to buy you a wedding Gift!</strong>
+          <strong>
+            <div className="ita">Voglio comprare un regalo di matrimonio!</div>
+          </strong>
+          We thought a lot about this. Please contribute to our{" "}
+          <a href="https://gofund.me/b734c85c">gofundme campaign</a>
+          <div className="ita">
+            Abbiamo pensato un sacco a sta cosa. Per fovore partecipa alla
+            nostra <a href="https://gofund.me/b734c85c">campagna gofundme</a>
+          </div>
+        </div>
       </div>
 
       <div className="scroll-bg theform">
