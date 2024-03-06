@@ -69,8 +69,8 @@ export default function FeedbackForm() {
       <input type="radio" id="car" name="car" value="nocar" /> I don't have a
       car <div className="ita"> No, non ho una macchina </div>
       <br />
-      <input type="radio" id="car" name="car" value="drinkcar" /> WTF are you
-      talking about? I want to drink! No drive!{" "}
+      <input type="radio" id="car" name="car" value="bus" /> WTF are you talking
+      about? I want to drink! No drive!{" "}
       <div className="ita">
         {" "}
         Ma di che capperi stai parlando? Io voglio bere! No guidare!{" "}

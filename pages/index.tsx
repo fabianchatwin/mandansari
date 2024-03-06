@@ -69,7 +69,9 @@ export default function Home() {
           <br />
           <div className="gold">
             <br />
-            <a href="https://gofund.me/b734c85c">click here</a>
+            <a href="https://gofund.me/b734c85c" className="gold clickme">
+              click here
+            </a>
           </div>
         </h4>
       </div>
