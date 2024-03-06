@@ -137,7 +137,20 @@ h4 {
 .bg-7 {
   background-image: url("/open-mouth.jpg");
 }
-
+.bg-7::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Adjust the alpha value (last parameter) to control darkness */
+}
 .scrolling-image {
   position: absolute;
   top: 0;
@@ -149,7 +162,9 @@ h4 {
   color: maroon;
   font-style: italic;
 }
-
+.leftText {
+  text-align: left;
+}
 @keyframes scrollImage {
   0% {
     transform: translateX(0%);

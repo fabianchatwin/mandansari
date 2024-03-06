@@ -40,6 +40,7 @@ export default function Home() {
         <h4>when?</h4>
         <h1>
           3pm <br />
+          Saturday <br />
           20-04-2024
         </h1>
       </div>
@@ -75,7 +76,6 @@ export default function Home() {
             <br />
             <a href="https://www.gofundme.com"> support our gofundme</a>
           </div>
-          come on we wonna reach 10000 euros
         </h4>
       </div>
 
@@ -100,7 +100,8 @@ export default function Home() {
         <p>
           <strong>I want to buy you a wedding Gift!</strong>
         </p>
-        don't worry we got you covered
+        We thought a lot about this. Please contribute to our
+        <a href="https://www.gofundme.com">gofundme campaign</a>.
       </div>
 
       <div className="scroll-bg theform">
