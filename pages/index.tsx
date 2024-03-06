@@ -78,7 +78,10 @@ export default function Home() {
         <div className="textLeft">
           <strong>FAQQQSS</strong>
           <p></p>
-          <strong>So what I have to do? /Ma quindi cosa devo fare?</strong>
+          <strong>So what do I have to do? </strong>
+          <strong>
+            <div className="ita">Ma quindi cosa devo fare?</div>
+          </strong>
           fill the form below <div className="ita">compila il modulo sotto</div>
           <p></p>
           <strong>Dinner? / Cena? </strong>
