@@ -74,6 +74,10 @@ body {
   background-color: lightgoldenrodyellow;
 }
 
+.faq {
+  height: 2000px;
+}
+
 .textLeft {
   display: flex;
   flex-direction: column;
@@ -157,13 +161,22 @@ h4 {
 .bg-7 {
   background-image: url("/open-mouth.jpg");
 }
-.bg-7::before {
+
+.bg-8 {
+  background-image: url("/hats.jpg");
+}
+
+.bg-7::before,
+.bg-8::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.bg-7::before {
   background-color: rgba(
     0,
     0,
@@ -171,6 +184,16 @@ h4 {
     0.7
   ); /* Adjust the alpha value (last parameter) to control darkness */
 }
+
+.bg-8::before {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the alpha value (last parameter) to control darkness */
+}
+
 .scrolling-image {
   position: absolute;
   top: 0;

@@ -76,7 +76,7 @@ export default function Home() {
         </h4>
       </div>
 
-      <div className="scroll-bg">
+      <div className="scroll-bg faq">
         <div className="textLeft">
           <strong>FAQQQSS</strong>
           <p></p>
