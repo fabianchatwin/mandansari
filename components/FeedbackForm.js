@@ -116,13 +116,18 @@ export default function FeedbackForm() {
       <br />
       <br />
       <br />
-      <label for="checkboxInput">Do you need a hotel recommendation?</label>
+      <label for="checkboxInput">
+        Do you need a hotel recommendation?
+        <div className="ita"> Ti serve un consiglio sull'hotel? </div>
+      </label>
       <br />
       <input type="checkbox" id="hotel" name="otherRequests" value="hotel" />
       Yes guys! Please give me a hotel recommendation
+      <div className="ita"> Si amici! Datemi un consiglio sull'hotel! </div>
       <br />
       <br />
       <label htmlFor="name">What is the magic word?</label>
+      <div className="ita"> Qual è la parola magica? </div>
       <input
         id="magicword"
         className={styles["form-field"]}
@@ -132,6 +137,7 @@ export default function FeedbackForm() {
       />
       <br />
       <label htmlFor="feedback">Anything else you want us to know?</label>
+      <div className="ita"> Altre cose che ci vuoi far sapere? </div>
       <textarea
         id="feedback"
         className={styles["form-field"]}
