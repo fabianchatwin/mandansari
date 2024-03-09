@@ -14,23 +14,21 @@ export default function Success() {
   }, []);
 
   return (
-    <body>
-      <div className="wrapper">
-        <div className="fixed-bg bg-8">
-          <h1>
-            Submission Received!
+    <div className="wrapper">
+      <div className="fixed-bg bg-8">
+        <h1>
+          Submission Received!
+          <p>
+            Thank you!
             <p>
-              Thank you!
-              <p>
-                <Link href="/">
-                  <a>home page</a>
-                </Link>
-                .
-              </p>
+              <Link href="/">
+                <a>home page</a>
+              </Link>
+              .
             </p>
-          </h1>
-        </div>
+          </p>
+        </h1>
       </div>
-    </body>
+    </div>
   );
 }
