@@ -73,15 +73,22 @@ const Program: React.FC = () => {
           </div>
           <div>
             <h2>16:15 - Trip to restaurant</h2>
+            <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPxxtKhKTUjZJHBbV_2whdNPXPsMAQQoCQCoPQlawbo_RxSWPRUw0xnuC3oDt75JJPUTG8Aop3dai0/pubhtml">
+              Wedding BUS passengers
+            </a>
             <div className="ita">
               The bus will be waiting at Parade arrival<br></br>
-              For those going by car the parking is 200mt
+              For those going by car the parking is 200m
             </div>
           </div>
           <div>
             <h2>16:45 - Restaurant Official Party</h2>
             <a href="https://maps.app.goo.gl/3SCqoFSLVrBLWheRA">
               @Ristorante Trattoria Al Bosco
+            </a>
+            <br></br>
+            <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRV7sMs2BY8erdPWDMUwLaOY8f7w7KG7GyPfQHjvO5MsgiQ-2DxkijnbWpNwFclH6zMHgLkHSIoc8sB/pubhtml?gid=539220598&single=true">
+              Tableau de Marriage
             </a>
             <div className="ita">
               17:00 Musical Buffet<br></br>
@@ -123,7 +130,7 @@ const Program: React.FC = () => {
             <div className="ita">
               We have some tables reserved<br></br>
               Closing at 4am<br></br>
-              Walkable from hotel<br></br>
+              Walkable to hotel<br></br>
               Taxi Padova: +39 049651333<br></br>
             </div>
           </div>
