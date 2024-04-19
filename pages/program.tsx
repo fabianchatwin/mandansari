@@ -16,7 +16,7 @@ const Program: React.FC = () => {
     <>
       <div className="wrapper">
         <div className="title">
-          💕💍<br></br>
+          <br></br> 💕💍<br></br>
           Program
           <br></br>
         </div>
@@ -140,7 +140,11 @@ const Program: React.FC = () => {
           </div>
         </div>
         <div>
-          <h1>🎉🥂</h1>
+          <h1>
+            <img src="/hongkong1.jpg" className="smallimage" />
+            <br></br>
+            🎉🥂
+          </h1>
           <br></br>
         </div>
       </div>
