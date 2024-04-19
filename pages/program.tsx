@@ -100,7 +100,7 @@ const Program: React.FC = () => {
               <br></br>
               2.{" "}
               <a href="https://maps.app.goo.gl/RN5BY46ae1cBa1iQ9">
-                Club Anima UInderground - Padova
+                Club Anima Underground - Padova
               </a>
               <br></br>
               3.{" "}
