@@ -22,7 +22,7 @@ const Program: React.FC = () => {
         </div>
         <div className="program">
           <div>
-            <h3>Have you done a donation to our Crowdfunding?</h3>
+            <h3>Have you made a donation to our Crowdfunding?</h3>
             <a href="https://gofund.me/9adbae85">
               A Wedding Gift of Hope: Maya's Dream Warung
             </a>
@@ -74,7 +74,7 @@ const Program: React.FC = () => {
           <div>
             <h2>16:15 - Trip to restaurant</h2>
             <div className="ita">
-              The bus will be waiting at arrival<br></br>
+              The bus will be waiting at Parade arrival<br></br>
               For those going by car the parking is 200mt
             </div>
           </div>
@@ -100,7 +100,7 @@ const Program: React.FC = () => {
               <br></br>
               2.{" "}
               <a href="https://maps.app.goo.gl/RN5BY46ae1cBa1iQ9">
-                Club Anima UInderground - Padova
+                Club Anima Underground - Padova
               </a>
               <br></br>
               3.{" "}
