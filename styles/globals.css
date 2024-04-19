@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 
-html, body, #__next {
+html,
+body,
+#__next {
   height: 100%;
   margin: 0;
   padding: 0;
+  color: #1e1e1e;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  background: #fff8e7;
 }
 
 .wrapper {
@@ -12,65 +22,224 @@ html, body, #__next {
   line-height: 1.5;
   word-spacing: 4px;
   letter-spacing: 1px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .fixed-bg {
   position: relative;
   height: 100%;
-  color: white;
+  width: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  width: 100%;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-
-.scroll-bg {
-  padding: 10px 70px;
-  color: #676767;
-  background-color: #0f0f0a;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
+  transition: opacity 5s ease;
+  flex-direction: column;
 }
 
 .title {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  max-width: 600px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 2.5em;
+  margin-left: 60px;
+  margin-right: 60px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 2s ease;
+  text-shadow:
+    0 0 0.4em gold,
+    2px 2px 0.1em black,
+    0 0 0.4em gold,
+    0 0 0.5em gold;
+}
+
+.scroll-bg {
+  background-color: #fff8e7;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 86px;
+  padding: 10px 30px;
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  padding: 10px 30px;
+
+}
+
+.theform {
+  height: 2000px;
+  background-color: lightgoldenrodyellow;
+}
+
+.faq {
+  height: 1800px;
+}
+
+.textLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
   font-weight: bold;
-  color: purple;
-  opacity: 0;
-  transition: opacity 10s ease;
+  color: white;
+  font-size: 4em;
   z-index: 2;
+  text-shadow:
+    0 0 0.4em gold,
+    2px 2px 0.1em black,
+    0 0 0.4em gold,
+    0 0 0.5em gold;
+}
+
+h4 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 3em;
+  z-index: 2;
+  text-shadow:
+    0 0 0.4em red,
+    2px 2px 0.1em black,
+    0 0 0.4em blue,
+    0 0 0.5em gold;
+}
+
+.gold {
+  color: white;
+  text-shadow:
+    0 0 0.4em gold,
+    2px 2px 0.1em black,
+    0 0 0.4em gold,
+    0 0 0.5em gold;
+}
+
+.clickme {
+  border: yellow 2px solid;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: darkorchid;
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .bg-1 {
-  background-image: url("/lia-airport.jpg");
+  background-image: url("/hongkong1.jpg");
   opacity: 0;
-  transition: opacity 2s ease;
-  z-index: 1;
 }
-
-/* third section */
 
 .bg-2 {
-  background-image: url("/one.jpg");
+  background-image: url("/tajmahal.jpg");
 }
 
-/* fifth section */
-
 .bg-3 {
-  background-image: url("/two.jpg");
+  background-image: url("/granguardiapadova.jpg");
+}
+
+.bg-4 {
+}
+
+.bg-5 {
+  background-image: url("/heart.jpg");
+}
+
+.bg-6 {
+  background-image: url("/looking-away.jpg");
+}
+
+.bg-7 {
+  background-image: url("/open-mouth.jpg");
+}
+
+.bg-8 {
+  background-image: url("/hats.jpg");
+}
+
+.bg-7::before,
+.bg-8::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-7::before {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Adjust the alpha value (last parameter) to control darkness */
+}
+
+.bg-8::before {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the alpha value (last parameter) to control darkness */
+}
+
+.scrolling-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: scrollImage 10s linear infinite;
+}
+
+.ita {
+  color: maroon;
+  font-style: italic;
+}
+
+@keyframes scrollImage {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.zooming-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: zoomIn 10s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
