@@ -69,6 +69,15 @@ body {
   padding: 10px 30px;
 }
 
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  padding: 10px 30px;
+
+}
+
 .theform {
   height: 2000px;
   background-color: lightgoldenrodyellow;
