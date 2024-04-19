@@ -22,7 +22,7 @@ const Program: React.FC = () => {
         </div>
         <div className="program">
           <div>
-            <h3>Have you done a donation to our Crowdfunding?</h3>
+            <h3>Have you made a donation to our Crowdfunding?</h3>
             <a href="https://gofund.me/9adbae85">
               A Wedding Gift of Hope: Maya's Dream Warung
             </a>
