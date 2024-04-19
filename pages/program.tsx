@@ -74,7 +74,7 @@ const Program: React.FC = () => {
           <div>
             <h2>16:15 - Trip to restaurant</h2>
             <div className="ita">
-              The bus will be waiting at arrival<br></br>
+              The bus will be waiting at Parade arrival<br></br>
               For those going by car the parking is 200mt
             </div>
           </div>
