@@ -123,7 +123,7 @@ const Program: React.FC = () => {
             <div className="ita">
               We have some tables reserved<br></br>
               Closing at 4am<br></br>
-              Walkable from hotel<br></br>
+              Walkable to hotel<br></br>
               Taxi Padova: +39 049651333<br></br>
             </div>
           </div>
