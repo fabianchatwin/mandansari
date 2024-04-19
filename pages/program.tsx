@@ -22,6 +22,13 @@ const Program: React.FC = () => {
         </div>
         <div className="program">
           <div>
+            <h3>Have you done a donation to our Crowdfunding?</h3>
+            <a href="https://gofund.me/9adbae85">
+              A Wedding Gift of Hope: Maya's Dream Warung
+            </a>
+          </div>
+
+          <div>
             <h3>Recommended car parking:</h3>
             <a href="https://maps.app.goo.gl/EXihjUKd5C9mQckx6">
               Car Park Padua city centre
@@ -41,6 +48,7 @@ const Program: React.FC = () => {
               (consider checking in before starting so you can get ready)
             </div>
           </div>
+          <hr></hr>
           <div>
             <h2>13:30 - Pre Wedding warm up</h2>
             <a href="https://maps.app.goo.gl/q79jMSmD77XyGvfr7">
@@ -67,7 +75,7 @@ const Program: React.FC = () => {
             <h2>16:15 - Trip to restaurant</h2>
             <div className="ita">
               The bus will be waiting at arrival<br></br>
-              For those going by car the parking is just around the corner
+              For those going by car the parking is 200mt
             </div>
           </div>
           <div>
@@ -127,7 +135,7 @@ const Program: React.FC = () => {
             <div className="ita">
               Music Band<br></br>
               Pasta Pizza and Beer<br></br>
-              Open invitation bring your friend!<br></br>
+              Open invitation bring your friends!<br></br>
             </div>
           </div>
         </div>
