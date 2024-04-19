@@ -84,7 +84,7 @@ const Program: React.FC = () => {
               @Ristorante Trattoria Al Bosco
             </a>
             <div className="ita">
-              17:00 Musical BUffet<br></br>
+              17:00 Musical Buffet<br></br>
               20:00 Dinner<br></br>
               22:00 Dance<br></br>
             </div>
