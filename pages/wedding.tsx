@@ -15,8 +15,12 @@ export default function Home() {
 
   return (
     <div className="wrapper">
-      <div className="fixed-bg bg-10">
-        <div className="title">The fafalala informal Support Network</div>
+      <div className="fixed-bg bg-1">
+        <div className="title">
+          💕💍<br></br>
+          Welcome to Fabian and Lia's Wedding Celebration
+          <br></br>🎉🥂
+        </div>
       </div>
 
       <div className="scroll-bg">
@@ -30,6 +34,46 @@ export default function Home() {
           <br></br>
           <br></br>
         </h2>
+      </div>
+
+      <div className="fixed-bg bg-2 ">
+        <h4>when?</h4>
+        <h1>
+          3pm <br />
+          Saturday <br />
+          20-04-2024
+        </h1>
+      </div>
+
+      <div className="fixed-bg bg-3">
+        <h4>where?</h4>
+        <h1>Palazzo Gran Guardia</h1>
+        <h4>Padova</h4>
+      </div>
+
+      <div className="fixed-bg bg-5">
+        <h1>Celebration and Dinner Party</h1>
+      </div>
+
+      <div className="fixed-bg bg-6">
+        <h1>
+          After Party <br />
+          Chillout <br /> Sunday
+        </h1>
+        <h4>location to be announced</h4>
+      </div>
+
+      <div className="fixed-bg bg-7">
+        <h4>
+          wedding gift?
+          <br />
+          <div className="gold">
+            <br />
+            <a href="https://gofund.me/b734c85c" className="gold clickme">
+              click here
+            </a>
+          </div>
+        </h4>
       </div>
 
       <div className="scroll-bg faq">
@@ -64,6 +108,19 @@ export default function Home() {
             nostra <a href="https://gofund.me/b734c85c">campagna gofundme</a>
           </div>
         </div>
+      </div>
+
+      <div className="scroll-bg theform">
+        <h3>
+          Please fill this form to confirm your participation! If you are
+          family, send only one form for all the family.
+          <div className="ita">
+            Per favore compila questo form di partecipazione! Se sei una
+            famiglia, compila un solo form per tutta la tua famiglia!
+          </div>
+        </h3>
+
+        <FeedbackForm />
       </div>
     </div>
   );
