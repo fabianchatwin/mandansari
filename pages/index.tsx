@@ -1,5 +1,7 @@
 import FeedbackForm from "@components/FeedbackForm";
 import React, { useEffect } from "react";
+import BrevoForm from "@components/BrevoForm";
+import DonationUpdate1 from "@components/DonationUpdate1";
 
 export default function Home() {
   useEffect(() => {
@@ -16,53 +18,48 @@ export default function Home() {
   return (
     <div className="wrapper">
       <div className="fixed-bg bg-10">
-        <div className="title">The fafalala informal Support Network</div>
+        <div className="title">
+          Welcome to the fafalala informal Support Network
+        </div>
       </div>
 
       <div className="scroll-bg">
         <h2>
-          Friends, here we are. Really. Yes.
-          <div className="ita">Amici, ci siamo. Veramente. Si. </div>
-          <br></br>
-          <br></br>
-          We are getting married!
-          <div className="ita">Ci sposiamo!</div>
-          <br></br>
+          The fafalala Support Network is the crowdfunding project started at
+          Fabian and Lia wedding.<br></br>
+          <div className="ita">
+            Our mission is to empower less fortunate individuals with
+            opportunities for growth and advancement.
+          </div>
+          <iframe
+            width="540"
+            height="700"
+            src="https://3fa9f914.sibforms.com/serve/MUIFAEnKQ86rzjvUO2P3nMrLXNDqB4_V5s6UqlX4Na3yUKamb-3-RCTa1lwJ2eWTWZFOmPX2xOlF4N2PQN3b3iy3gWgkBlU65fwLD3F-9gonXUZrRBDl9lfaxnGc8CJ--A4eMjbrkqdzCmi91YeKrg4WOH_9ILBp19x4Rm-U1QGA_nXE5pap87v_49EIdbOV6154vTYaeDLZTAoS"
+            frameBorder="0"
+            scrolling="auto"
+            allowFullScreen
+            style={{
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+              maxWidth: "100%",
+            }}
+          ></iframe>
+        </h2>
+        <h2>
+          <a href="https://gofund.me/b734c85c">
+            Our original crowdfunding project
+          </a>
+        </h2>
+        <h2>
+          <a href="">Wedding Photos</a>
           <br></br>
         </h2>
       </div>
 
       <div className="scroll-bg faq">
         <div className="textLeft">
-          <strong>FAQQQSS</strong>
-          <p></p>
-          <strong>So what do I have to do? </strong>
-          <strong>
-            <div className="ita">Ma quindi cosa devo fare?</div>
-          </strong>
-          fill the form below <div className="ita">compila il modulo sotto</div>
-          <p></p>
-          <strong>Dinner? / Cena? </strong>
-          don't worry we got you covered
-          <div className="ita">Tranqui ci pensiamo noi</div>
-          <p></p>
-          <strong>How about hotels transportations and stuff?</strong>
-          <strong>
-            <div className="ita">Ma hotel e spostamenti e balle varie?</div>
-          </strong>
-          just fill the form below
-          <div className="ita">tu compila il modulo</div>
-          <p></p>
-          <strong>I want to buy you a wedding Gift!</strong>
-          <strong>
-            <div className="ita">Voglio comprare un regalo di matrimonio!</div>
-          </strong>
-          We thought a lot about this. Please contribute to our{" "}
-          <a href="https://gofund.me/b734c85c">gofundme campaign</a>
-          <div className="ita">
-            Abbiamo pensato un sacco a sta cosa. Per fovore partecipa alla
-            nostra <a href="https://gofund.me/b734c85c">campagna gofundme</a>
-          </div>
+          <DonationUpdate1 />
         </div>
       </div>
     </div>

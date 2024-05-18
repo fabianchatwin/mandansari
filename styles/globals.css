@@ -260,3 +260,7 @@ hr {
   width: 100px;
   clip-path: polygon(5px 20px, 80px 20px, 80px 90px, 5px 90px);
 }
+
+.hidden {
+  display: none;
+}

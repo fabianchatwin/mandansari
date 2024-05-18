@@ -1,0 +1,123 @@
+/* BrevoForm.module.css */
+
+.sibForm {
+  text-align: center;
+  background-color: #eff2f7;
+}
+.sibFormContainer {
+  /* Additional styles for form container */
+}
+.sibFormMessagePanel {
+  font-size: 16px;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  border-radius: 3px;
+  max-width: 540px;
+}
+.errorMessage {
+  color: #661d1d;
+  background-color: #ffeded;
+  border-color: #ff4949;
+}
+.successMessage {
+  color: #1d661d;
+  background-color: #edfff0;
+  border-color: #49ff49;
+}
+.sibFormMessagePanelText {
+  display: flex;
+  align-items: center;
+}
+.sibIcon {
+  margin-right: 8px;
+}
+.sibContainer {
+  padding: 8px 0;
+}
+.sibFormBlock {
+  padding: 8px 0;
+}
+.sibTextFormBlock {
+  font-size: 16px;
+}
+.sibInput {
+  text-align: left;
+}
+.formEntry {
+  margin-bottom: 16px;
+}
+.formLabelRow {
+  display: flex;
+  flex-direction: column;
+}
+.entryLabel {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.entryField {
+  margin-bottom: 4px;
+}
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.entryError {
+  color: red;
+  font-size: 12px;
+}
+.entrySpecification {
+  font-size: 12px;
+  color: #666;
+}
+.sibOptin {
+  text-align: left;
+}
+.entryChoice {
+  display: flex;
+  align-items: center;
+}
+.inputReplaced {
+  display: none;
+}
+.checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.checkboxTickPositive {
+  background-color: #49ff49;
+}
+.checkboxText {
+  font-size: 14px;
+}
+.sibFormBlockButton {
+  text-align: left;
+}
+.sibFormBlockButtonWithLoader {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.icon {
+  margin-right: 8px;
+}
+.sibFormBlockText {
+  font-size: 12px;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  color: #3c4858;
+  background-color: transparent;
+}
+.inputHidden {
+  display: none;
+}
