@@ -1,13 +1,17 @@
-.bg-10 {
-  background-image: url("/lot_people.jpg");
+.photo-wrapper {
+  width: 100%;
+  height: 500px;
 }
-
-.bg-10::before {
-  content: "";
+.front-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  max-height: 500px;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.front-image.active {
+  opacity: 1;
 }
