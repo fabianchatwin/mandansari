@@ -128,7 +128,7 @@ export default function Gallery() {
             &gt;
           </button>
           <button className="gallery-pause-button" onClick={togglePause}>
-            {isPaused ? "Play" : "Pause"}
+            {isPaused ? "Auto" : "Manual"}
           </button>
           <div className="gallery-timer">{secondsRemaining}</div>
           <button
