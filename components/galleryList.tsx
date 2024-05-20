@@ -25,13 +25,22 @@ export default function GalleryList({ folder }) {
 
   return (
     <div className="gallery-all-container">
-      <button
-        className="gallery-list-button"
-        style={{ animationDelay: "1s" }}
-        onClick={() => galleryAll()}
-      >
-        All Galleries
-      </button>
+      <div className="gallery-list-all-container">
+        <button
+          className="gallery-list-button left-button"
+          style={{ animationDelay: "1s" }}
+          onClick={() => galleryAll()}
+        >
+          All Galleries
+        </button>
+        <button
+          className="gallery-list-button right-button"
+          style={{ animationDelay: "1s" }}
+          onClick={() => handleClick(0)}
+        >
+          Slideshow
+        </button>
+      </div>
       <p></p>
       {images.length > 0 && (
         <div className="gallery-all-photo-wrapper">

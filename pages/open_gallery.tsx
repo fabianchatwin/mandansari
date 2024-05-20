@@ -16,28 +16,28 @@ export default function Intro() {
   return (
     <div className="gallery-list-container">
       <button
-        className="gallery-list-button"
+        className="gallery-open-button"
         style={{ animationDelay: "0s" }}
         onClick={() => goGalleryList("Folder1")}
       >
         Button 1
       </button>
       <button
-        className="gallery-list-button"
+        className="gallery-open-button"
         style={{ animationDelay: "0.1s" }}
         onClick={() => goGalleryList("samples")}
       >
         samples
       </button>
       <button
-        className="gallery-list-button"
+        className="gallery-open-button"
         style={{ animationDelay: "0.2s" }}
         onClick={() => goGalleryList("WEDDING")}
       >
         WEDDING
       </button>
       <button
-        className="gallery-list-button"
+        className="gallery-open-button"
         style={{ animationDelay: "0.3s" }}
         onClick={goHome}
       >
