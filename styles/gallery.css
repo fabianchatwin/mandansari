@@ -1,7 +1,8 @@
 .gallery-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +13,7 @@
   width: 100%;
   height: 100%;
   position: relative;
+  transition: transform 0.5s ease;   
 }
 
 .gallery-front-image {
@@ -81,4 +83,17 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.gallery-pause-button {
+  position: absolute;
+  top: 10px; /* Adjust top position */
+  left: 10px; /* Adjust left position */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
 }
