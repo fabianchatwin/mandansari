@@ -5,7 +5,6 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef(null);
-  const [progressWidth, setProgressWidth] = useState("100%");
 
   useEffect(() => {
     async function fetchImages() {
@@ -18,11 +17,14 @@ export default function Home() {
 
     const interval = setInterval(() => {
       if (!isPaused) {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
       }
     }, 5000);
 
-    return () => clearInterval(interval);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, [images.length, isPaused]);
 
   const nextImage = () => {
@@ -44,6 +46,7 @@ export default function Home() {
   };
 
   const handleTouchEnd = (e) => {
+    if(!isPaused) {
     if (touchStartX.current - e.changedTouches[0].clientX > 50) {
       // Swipe left
       nextImage();
@@ -51,6 +54,7 @@ export default function Home() {
       // Swipe right
       prevImage();
     }
+  }
   };
 
   const handleFullscreen = () => {
@@ -98,7 +102,7 @@ export default function Home() {
                 alt={`Image ${index + 1}`}
                 className={`front-image ${
                   index === currentImageIndex ? "active" : "inactive"
-                } `}
+                } ${index === currentImageIndex && !isPaused ? "animating" : ""}`}
               />
             ))}
           </div>
