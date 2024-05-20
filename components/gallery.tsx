@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 
-export default function Home() {
+export default function Gallery() {
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [secondsRemaining, setSecondsRemaining] = useState(5); // Initialize with 5 seconds
   const touchStartX = useRef(null);
 
   useEffect(() => {
@@ -17,15 +18,24 @@ export default function Home() {
 
     const interval = setInterval(() => {
       if (!isPaused) {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setSecondsRemaining(5);
       }
     }, 5000);
-
 
     return () => {
       clearInterval(interval);
     };
   }, [images.length, isPaused]);
+
+  useEffect(() => {
+    const countdown = setInterval(() => {
+      if (!isPaused && secondsRemaining > 0) {
+        setSecondsRemaining((prevSeconds) => prevSeconds - 1);
+      }
+    }, 1000);
+    return () => clearInterval(countdown);
+  }, [isPaused, secondsRemaining]);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -33,7 +43,7 @@ export default function Home() {
 
   const prevImage = () => {
     setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     );
   };
 
@@ -46,21 +56,26 @@ export default function Home() {
   };
 
   const handleTouchEnd = (e) => {
-    if(!isPaused) {
-    if (touchStartX.current - e.changedTouches[0].clientX > 50) {
-      // Swipe left
-      nextImage();
-    } else if (e.changedTouches[0].clientX - touchStartX.current > 50) {
-      // Swipe right
-      prevImage();
+    if (!isPaused) {
+      if (touchStartX.current - e.changedTouches[0].clientX > 50) {
+        // Swipe left
+        nextImage();
+      } else if (e.changedTouches[0].clientX - touchStartX.current > 50) {
+        // Swipe right
+        prevImage();
+      }
     }
-  }
   };
 
   const handleFullscreen = () => {
     const elem = document.documentElement;
-    if (!document.fullscreenElement &&    // alternative standard method
-        !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+    if (
+      !document.fullscreenElement && // alternative standard method
+      !document.mozFullScreenElement &&
+      !document.webkitFullscreenElement &&
+      !document.msFullscreenElement
+    ) {
+      // current working methods
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
       } else if (elem.mozRequestFullScreen) {
@@ -115,6 +130,7 @@ export default function Home() {
           <button className="gallery-pause-button" onClick={togglePause}>
             {isPaused ? "Play" : "Pause"}
           </button>
+          <div className="gallery-timer">{secondsRemaining}</div>
           <button
             className="gallery-fullscreen-button"
             onClick={handleFullscreen}
