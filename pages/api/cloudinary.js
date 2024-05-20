@@ -9,8 +9,14 @@ cloudinary.config({
 
 export default async function handler(req, res) {
   try {
+    const { folder } = req.query;
+
+    if (!folder) {
+      return res.status(400).json({ error: "Folder parameter is required" });
+    }
+
     const { resources } = await cloudinary.search
-      .expression("folder:WEDDING")
+      .expression(`folder:${folder}`)
       .sort_by("public_id", "desc")
       .max_results(30)
       .execute();

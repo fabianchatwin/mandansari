@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 
-export default function Gallery() {
+export default function Gallery({ folder, startIndex = 0 }) {
   const [images, setImages] = useState([]);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(startIndex);
   const [isPaused, setIsPaused] = useState(false);
-  const [secondsRemaining, setSecondsRemaining] = useState(5); // Initialize with 5 seconds
+  const [secondsRemaining, setSecondsRemaining] = useState(5);
   const touchStartX = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
-    async function fetchImages() {
-      const response = await fetch("/api/cloudinary");
+    async function fetchImages(folder) {
+      const response = await fetch(`/api/cloudinary?folder=${folder}`);
       const data = await response.json();
       setImages(data);
     }
 
-    fetchImages();
+    fetchImages(folder);
 
     const interval = setInterval(() => {
       if (!isPaused) {
@@ -98,8 +100,15 @@ export default function Gallery() {
     }
   };
 
+  const goList = () => {
+    router.push(`/gallery_router?folder=${folder}&list=1`);
+  };
+
   return (
     <div className="gallery-container">
+      <button className="gallery-go-list-button" onClick={() => goList()}>
+        MOSAIC
+      </button>
       {images.length > 0 && (
         <>
           <div className="gallery-counter">
