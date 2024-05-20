@@ -9,16 +9,16 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 10000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   const images = [
-    "hongkong1.jpg",
+    "group_1.jpg",
     "lot_people.jpg",
-    "tajmahal.jpg",
-    "granguardiapadova.jpg",
+    "group_2.jpg",
+    "group_3.jpg",
   ];
 
   return (
