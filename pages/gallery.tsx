@@ -30,6 +30,33 @@ export default function Home() {
     );
   };
 
+  const handleFullscreen = () => {
+    const elem = document.documentElement;
+    if (!document.fullscreenElement &&    // alternative standard method
+        !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+  };
+  
+
   return (
     <div className="gallery-container">
       {console.log("hello")}
@@ -53,6 +80,12 @@ export default function Home() {
           </button>
           <button className="gallery-next-button" onClick={nextImage}>
             &gt;
+          </button>          
+          <button
+            className="gallery-fullscreen-button"
+            onClick={handleFullscreen}
+          >
+            Fullscreen
           </button>
         </>
       )}

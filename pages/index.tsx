@@ -64,7 +64,7 @@ export default function Home() {
             </a>
           </h2>
           <h2>
-            <a href="">Wedding Photos</a>
+            <a href="/gallery">Wedding Gallery</a>
             <br></br>
           </h2>
         </div>
