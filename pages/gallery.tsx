@@ -31,26 +31,31 @@ export default function Home() {
   };
 
   return (
-    <div className="wrapper">
-      <div className="photo-wrapper">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Image ${index + 1}`}
-            className={`front-image ${index === currentImageIndex ? "active" : "inactive"}`}
-          />
-        ))}
-        <button className="nav-button left" onClick={prevImage}>
-          &lt;
-        </button>
-        <button className="nav-button right" onClick={nextImage}>
-          &gt;
-        </button>
-        <div className="counter">
-          {currentImageIndex + 1} / {images.length}
-        </div>
-      </div>
+    <div className="gallery-container">
+      {console.log("hello")}
+      {images.length > 0 && (
+        <>
+          <div className="gallery-counter">
+            {currentImageIndex + 1} / {images.length}
+          </div>
+          <div className="gallery-photo-wrapper">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Image ${index + 1}`}
+                className={`front-image ${index === currentImageIndex ? "active" : "inactive"}`}
+              />
+            ))}
+          </div>
+          <button className="gallery-prev-button" onClick={prevImage}>
+            &lt;
+          </button>
+          <button className="gallery-next-button" onClick={nextImage}>
+            &gt;
+          </button>
+        </>
+      )}
     </div>
   );
 }
