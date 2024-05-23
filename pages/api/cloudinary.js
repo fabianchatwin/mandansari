@@ -1,4 +1,3 @@
-// pages/api/cloudinary.js
 import { v2 as cloudinary } from "cloudinary";
 
 cloudinary.config({
@@ -9,17 +8,21 @@ cloudinary.config({
 
 export default async function handler(req, res) {
   try {
-    const { folder } = req.query;
+    const { folder, limit } = req.query;
 
     if (!folder) {
       return res.status(400).json({ error: "Folder parameter is required" });
     }
 
-    const { resources } = await cloudinary.search
+    let searchQuery = cloudinary.search
       .expression(`folder:${folder}`)
-      .sort_by("public_id", "desc")
-      .max_results(30)
-      .execute();
+      .sort_by("public_id", "desc");
+
+    if (limit && !isNaN(parseInt(limit))) {
+      searchQuery = searchQuery.max_results(parseInt(limit));
+    }
+
+    const { resources } = await searchQuery.execute();
 
     const images = resources.map((resource) => resource.secure_url);
     res.status(200).json(images);

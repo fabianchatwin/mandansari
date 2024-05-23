@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/router";
+import SlideShow from "./slideshow";
 
-export default function GalleryList({ folder }) {
+export default function GalleryList({ folder, onBack }) {
   const [images, setImages] = useState([]);
-  const router = useRouter();
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [isSlideshow, setIsSlideshow] = useState(false);
 
   useEffect(() => {
     async function fetchImages(folder) {
@@ -11,17 +12,23 @@ export default function GalleryList({ folder }) {
       const data = await response.json();
       setImages(data);
     }
-
     fetchImages(folder);
   }, [folder]);
 
-  const handleClick = (index) => {
-    router.push(`/gallery_router?folder=${folder}&startIndex=${index}&list=0`);
+  const startSlideshow = (index = 0) => {
+    setSelectedIndex(index);
+    setIsSlideshow(true);
   };
 
-  const galleryAll = () => {
-    router.push("/open_gallery");
-  };
+  if (isSlideshow) {
+    return (
+      <SlideShow
+        folder={folder}
+        startIndex={selectedIndex}
+        onBack={() => setIsSlideshow(false)}
+      />
+    );
+  }
 
   return (
     <div className="gallery-all-container">
@@ -29,14 +36,14 @@ export default function GalleryList({ folder }) {
         <button
           className="gallery-list-button left-button"
           style={{ animationDelay: "1s" }}
-          onClick={() => galleryAll()}
+          onClick={onBack}
         >
           All Galleries
         </button>
         <button
           className="gallery-list-button right-button"
           style={{ animationDelay: "1s" }}
-          onClick={() => handleClick(0)}
+          onClick={() => startSlideshow(0)}
         >
           Slideshow
         </button>
@@ -50,7 +57,7 @@ export default function GalleryList({ folder }) {
               src={image}
               alt={`Image ${index + 1}`}
               className="gallery-all-image"
-              onClick={() => handleClick(index)}
+              onClick={() => startSlideshow(index)}
             />
           ))}
         </div>

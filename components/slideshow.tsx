@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/router";
 
-export default function Gallery({ folder, startIndex = 0 }) {
+export default function SlideShow({ folder, startIndex = 0, onBack }) {
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(startIndex);
   const [isPaused, setIsPaused] = useState(false);
   const [secondsRemaining, setSecondsRemaining] = useState(5);
   const touchStartX = useRef(null);
-  const router = useRouter();
 
   useEffect(() => {
     async function fetchImages(folder) {
@@ -100,13 +98,9 @@ export default function Gallery({ folder, startIndex = 0 }) {
     }
   };
 
-  const goList = () => {
-    router.push(`/gallery_router?folder=${folder}&list=1`);
-  };
-
   return (
     <div className="gallery-container">
-      <button className="gallery-go-list-button" onClick={() => goList()}>
+      <button className="gallery-go-list-button" onClick={onBack}>
         MOSAIC
       </button>
       {images.length > 0 && (
