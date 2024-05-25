@@ -203,6 +203,10 @@
   animation: slideIn 0.5s forwards;
 }
 
+.black-button {
+  background-color: black; /* optional: for better visibility */
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -221,6 +225,11 @@
   padding: 20px;
 }
 
+.gallery-all-video-wrapper {
+  display: flex;
+  justify-items: center;
+}
+
 .gallery-all-photo-wrapper {
   display: grid;
   grid-template-columns: repeat(
@@ -236,6 +245,14 @@
   height: auto;
   max-height: 200px; /* Adjust max-height for thumbnail size */
   object-fit: cover; /* Ensure the image covers the container */
+  cursor: pointer; /* Optional: add cursor pointer */
+  transition: transform 0.2s ease; /* Optional: add transition effect */
+}
+
+.gallery-all-video {
+  max-width: 100%;
+  width: auto;
+  margin: 10px auto;
   cursor: pointer; /* Optional: add cursor pointer */
   transition: transform 0.2s ease; /* Optional: add transition effect */
 }
