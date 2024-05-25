@@ -15,8 +15,8 @@ export default function Home() {
   }, []);
 
   const images = [
-    "group_1.jpg",
     "lot_people.jpg",
+    "group_1.jpg",
     "group_2.jpg",
     "group_3.jpg",
   ];
