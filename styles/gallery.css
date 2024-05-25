@@ -156,14 +156,17 @@
   opacity: 0;
   cursor: pointer;
   animation: slideIn 0.5s forwards;
+  min-height: 60px;
 }
 
 .left-button {
   animation-name: slideInLeft;
+  margin-right: 10px;
 }
 
 .right-button {
   animation-name: slideInRight;
+  margin-left: 10px;
 }
 
 @keyframes slideInLeft {

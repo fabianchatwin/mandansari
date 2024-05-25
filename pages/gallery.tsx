@@ -23,31 +23,59 @@ export default function Intro() {
   };
 
   const folderMap = {
-    Alice: ["RESTAURANT", "BUFFET", "BN", "FLOWERS", "CAKE", "BUBBLES", "MIX"],
-    JodanyBram: [], // Add subfolders as needed
-    WhatsappPhotos: ["SATURDAY", "SUNDAY"],
-    WHATSAPPVIDEOSUNDAY: [],
+    Alice: {
+      subfolders: [
+        "RESTAURANT",
+        "BUFFET",
+        "BN",
+        "FLOWERS",
+        "CAKE",
+        "BUBBLES",
+        "MIX",
+      ],
+      customLabels: [
+        "RESTAURANT",
+        "BUFFET",
+        "BLACK AND WHITE",
+        "FLOWERS",
+        "CAKE",
+        "BUBBLES",
+        "MIX",
+      ],
+    },
+    JodanyBram: {
+      subfolders: [],
+      customLabels: [],
+    },
+    WhatsappPhotos: {
+      subfolders: ["WHATSAPPPHOTOSATURDAY", "WHATSAPPPHOTOSSUNDAY"],
+      customLabels: ["Whatsapp Photos Saturday", "Whatsapp Photos Sunday"],
+    },
+    WHATSAPPVIDEOS: {
+      subfolders: ["WHATSAPPVIDEOSATURDAY", "WHATSAPPVIDEOSUNDAY"],
+      customLabels: ["Whatsapp Videos Saturday", "Whatsapp Videos Sunday"],
+    },
   };
 
   const handleClickFolder = (folder: string) => {
     setSelectedFolder(folder);
     setShowSubfolders(
-      folderMap[folder] && Object.keys(folderMap[folder]).length > 0,
+      folderMap[folder] && folderMap[folder].subfolders.length > 0,
     );
   };
 
-  const folders = showSubfolders
-    ? folderMap[selectedFolder || ""]
-    : ["Alice", "JodanyBram", "WhatsappPhotos", "WHATSAPPVIDEOSUNDAY"];
+  const renderFolders = showSubfolders
+    ? folderMap[selectedFolder || ""]?.subfolders
+    : ["Alice", "JodanyBram", "WhatsappPhotos", "WHATSAPPVIDEOS"];
   const buttonLabels = showSubfolders
-    ? folderMap[selectedFolder || ""]
+    ? folderMap[selectedFolder || ""]?.customLabels
     : [
         "OFFICIAL PHOTOS by ALICE DONAGGIO",
         "OFFICIAL VIDEOS by JODANY and BRAM",
         "WHATSAPP GROUP PHOTOS",
         "WHATSAPP GROUP VIDEOS",
       ];
-
+  console.log("HHHH " + selectedFolder + " " + showSubfolders);
   if (selectedFolder && !showSubfolders) {
     return <GalleryList folder={selectedFolder} onBack={handleBackToButtons} />;
   }
@@ -59,19 +87,19 @@ export default function Intro() {
           <VideoPlayer videoId="PCPPEn2EGh4" />
         </div>
       )}
-      {folders.map((folder, index) => (
+      {renderFolders.map((folder, index) => (
         <button
           key={folder}
           className="gallery-open-button title"
           style={{ animationDelay: `${index * 0.1}s` }}
           onClick={() => handleClickFolder(folder)}
         >
-          {buttonLabels[index]}
+          {buttonLabels ? buttonLabels[index] : folder}
         </button>
       ))}
       <button
         className="gallery-open-button"
-        style={{ animationDelay: `${folders.length * 0.1}s` }}
+        style={{ animationDelay: `${renderFolders.length * 0.1}s` }}
         onClick={goHome}
       >
         {showSubfolders ? "Back" : "Home"}
