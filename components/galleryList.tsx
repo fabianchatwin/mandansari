@@ -7,12 +7,19 @@ export default function GalleryList({ folder, onBack }) {
   const [isSlideshow, setIsSlideshow] = useState(false);
 
   useEffect(() => {
-    async function fetchItems(folder) {
-      const response = await fetch(`/api/cloudinary?folder=${folder}`);
-      const data = await response.json();
-      setItems(data);
+    async function fetchItems() {
+      if (folder === "ALLVIDEOS") {
+        setItems([
+          "https://fafalala.org/Venice.mov",
+          "https://fafalala.org/LIAFABIAN2024-10000.mp4",
+        ]);
+      } else {
+        const response = await fetch(`/api/cloudinary?folder=${folder}`);
+        const data = await response.json();
+        setItems(data);
+      }
     }
-    fetchItems(folder);
+    fetchItems();
   }, [folder]);
 
   const startSlideshow = (index = 0) => {
@@ -40,7 +47,7 @@ export default function GalleryList({ folder, onBack }) {
           style={{ animationDelay: "1s" }}
           onClick={onBack}
         >
-          {" WEDDING GALLERY"}
+          {"WEDDING GALLERY"}
         </button>
         {!isVideoFolder && (
           <button
@@ -58,12 +65,7 @@ export default function GalleryList({ folder, onBack }) {
           {isVideoFolder ? (
             items.map((video, index) => (
               <div className="gallery-all-video-wrapper" key={index}>
-                <video
-                  src={video}
-                  controls
-                  className="gallery-all-video"
-                  onClick={() => startSlideshow(index)}
-                />
+                <video src={video} controls className="gallery-all-video" />
                 <p></p>
               </div>
             ))

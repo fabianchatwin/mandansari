@@ -206,6 +206,10 @@
   animation: slideIn 0.5s forwards;
 }
 
+.gallery-open-video {
+  height: 200px;
+}
+
 .black-button {
   background-color: black; /* optional: for better visibility */
 }

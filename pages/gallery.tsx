@@ -43,7 +43,7 @@ export default function Intro() {
         "MIX",
       ],
     },
-    JodanyBram: {
+    ALLVIDEOS: {
       subfolders: [],
       customLabels: [],
     },
@@ -58,20 +58,23 @@ export default function Intro() {
   };
 
   const handleClickFolder = (folder: string) => {
-    setSelectedFolder(folder);
-    setShowSubfolders(
-      folderMap[folder] && folderMap[folder].subfolders.length > 0,
-    );
+    if (folderMap[folder]?.subfolders?.length > 0) {
+      setSelectedFolder(folder);
+      setShowSubfolders(true);
+    } else {
+      setSelectedFolder(folder);
+      setShowSubfolders(false);
+    }
   };
 
   const renderFolders = showSubfolders
     ? folderMap[selectedFolder || ""]?.subfolders
-    : ["Alice", "JodanyBram", "WhatsappPhotos", "WHATSAPPVIDEOS"];
+    : ["Alice", "ALLVIDEOS", "WhatsappPhotos", "WHATSAPPVIDEOS"];
   const buttonLabels = showSubfolders
     ? folderMap[selectedFolder || ""]?.customLabels
     : [
-        "OFFICIAL PHOTOS by ALICE DONAGGIO",
-        "OFFICIAL VIDEOS by JODANY and BRAM",
+        "OFFICIAL PHOTOS",
+        "OFFICIAL VIDEOS",
         "WHATSAPP GROUP PHOTOS",
         "WHATSAPP GROUP VIDEOS",
       ];
@@ -83,8 +86,15 @@ export default function Intro() {
   return (
     <div className="gallery-list-container">
       {!showSubfolders && (
-        <div className="gallery-open-button black-button">
-          <VideoPlayer videoId="PCPPEn2EGh4" />
+        <div className="gallery-open-button  video-container">
+          {/*<VideoPlayer videoId="PCPPEn2EGh4" /> // youtube video */}
+          <video
+            src="https://fafalala.org/LIAFABIAN2024-10000.mp4"
+            controls
+            autoPlay
+            muted
+            className="gallery-open-video"
+          />
         </div>
       )}
       {renderFolders.map((folder, index) => (
