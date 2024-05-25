@@ -101,7 +101,7 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
   return (
     <div className="gallery-container">
       <button className="gallery-go-list-button" onClick={onBack}>
-        MOSAIC
+        BACK TO GALLERY LIST
       </button>
       {images.length > 0 && (
         <>
@@ -131,14 +131,14 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
             &gt;
           </button>
           <button className="gallery-pause-button" onClick={togglePause}>
-            {isPaused ? "Auto" : "Manual"}
+            {isPaused ? "PLAY" : "PAUSE"}
           </button>
           <div className="gallery-timer">{secondsRemaining}</div>
           <button
             className="gallery-fullscreen-button"
             onClick={handleFullscreen}
           >
-            Fullscreen
+            FULLSCREEN
           </button>
         </>
       )}
