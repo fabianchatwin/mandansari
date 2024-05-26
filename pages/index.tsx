@@ -9,8 +9,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000); // Change image every 5 seconds
-
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -23,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="wrapper">
+      <div className="container">
         <div className="photo-wrapper">
           {images.map((image, index) => (
             <img
@@ -34,8 +33,7 @@ export default function Home() {
             />
           ))}
         </div>
-
-        <div className="scroll-bg">
+        <div className="content-wrapper">
           <h2>
             The fafalala Support Network is the crowdfunding project started at
             Fabian and Lia wedding.<br></br>
@@ -67,9 +65,7 @@ export default function Home() {
             <a href="/gallery">Wedding Gallery</a>
             <br></br>
           </h2>
-        </div>
 
-        <div className="scroll-bg faq">
           <div className="textLeft">
             <DonationUpdate1 />
           </div>
