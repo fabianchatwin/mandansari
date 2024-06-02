@@ -4,6 +4,7 @@ const DonationUpdate: React.FC = () => {
   return (
     <div>
       <h2>Thank you all for your donations!</h2>
+      Update 2 june 2024
       <p>
         We had a fantastic weekend, reconnecting with old friends and building
         new connections. It was wonderful to see everyone together. Your

@@ -1,5 +1,6 @@
 import FeedbackForm from "@components/FeedbackForm";
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import BrevoForm from "@components/BrevoForm";
 import DonationUpdate1 from "@components/DonationUpdate1";
 
@@ -14,31 +15,30 @@ const images = [
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slideshowImageRef = useRef<HTMLImageElement>(null);  
+  const router = useRouter();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Fade out the current image
       if (slideshowImageRef.current) {
         slideshowImageRef.current.classList.add('fade-out');
       }
 
-      // Change the image source after the fade-out transition
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
 
         if (slideshowImageRef.current) {
           slideshowImageRef.current.src = `/${images[(currentIndex + 1) % images.length]}`;
-
-          // Fade in the new image
           slideshowImageRef.current.classList.remove('fade-out');
         }
-      }, 1000); // This timeout should match the transition duration in CSS
+      }, 1000);
     }, 5000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-
+  const handleGalleryClick = () => {
+    router.push("/gallery");
+  };
 
   return (
     <>
@@ -52,17 +52,37 @@ export default function Home() {
         />
         </div>
         <div className="content-wrapper">
-          <h2>
+
+          <div className="content-gallery" onClick={handleGalleryClick} style={{ cursor: "pointer" }}>
+            <h2 className="gallery-button">Wedding Photo Gallery</h2>
+          </div>
+
+          <h1>
             The fafalala Support Network is the crowdfunding project started at
-            Fabian and Lia wedding.<br></br>
+            Fabian and Lia wedding.
+            <p></p>
             <div className="ita">
               Our mission is to empower less fortunate individuals with
               opportunities for growth and advancement.
             </div>
-            <iframe
-              width="540"
-              height="700"
-              src="https://3fa9f914.sibforms.com/serve/MUIFAEnKQ86rzjvUO2P3nMrLXNDqB4_V5s6UqlX4Na3yUKamb-3-RCTa1lwJ2eWTWZFOmPX2xOlF4N2PQN3b3iy3gWgkBlU65fwLD3F-9gonXUZrRBDl9lfaxnGc8CJ--A4eMjbrkqdzCmi91YeKrg4WOH_9ILBp19x4Rm-U1QGA_nXE5pap87v_49EIdbOV6154vTYaeDLZTAoS"
+          </h1>
+
+          <div className="content-subscribe">
+            <div className="column-1">
+                <h2>
+                  Collected: 9,900 euro!
+                  <p></p>
+                  Thank you all!
+                  <p></p>
+                  Enter your email to know what we are going to do with this money!
+                </h2>
+                      
+            </div>
+            <div className="column-2">
+          <iframe 
+            width="560" 
+            height="330" 
+            src="https://3fa9f914.sibforms.com/serve/MUIFAMFiOEZeTr-xFQkL0kgNOiMmLa6dNH-DzvhT-WtoaHyxzwEiBh2lD45uBuJ4aVHiZqrcla3c-WKqWhWpecjKI4hxftV3Xq-SsRuNtNwlVvYtzjgS5g-n2ctRoWFHN8Qux-rRw3_iujM0nlFnDjUUUiFzhT09py2qQBfCEei1QMfi3hyNIVoLpdaGBMOXuK926tqfhqzoS4rn"
               frameBorder="0"
               scrolling="auto"
               allowFullScreen
@@ -70,19 +90,18 @@ export default function Home() {
                 display: "block",
                 marginLeft: "auto",
                 marginRight: "auto",
-                maxWidth: "100%",
               }}
             ></iframe>
-          </h2>
+              
+              </div>
+          </div>
+
           <h2>
             <a href="https://gofund.me/b734c85c">
               Our original crowdfunding project
             </a>
           </h2>
-          <h2>
-            <a href="/gallery">Wedding Gallery</a>
-            <br></br>
-          </h2>
+          <hr></hr>
 
           <div className="textLeft">
             <DonationUpdate1 />

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Parisienne");
 
 html,
 body,
@@ -29,6 +30,7 @@ body,
   width: 100%;
   max-height: 668px;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .front-image {
@@ -44,6 +46,78 @@ body,
   opacity: 0;
 }
 
-.content-wrapper {
-    background: green;
+h1, h2 {
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+hr {
+  width: 20%;
+  border: none; /* Remove the default border */
+  border-top: 1px solid maroon; /* Create a dashed line with specified color */
+  margin: 0 auto; /* Center the hr */
+}
+
+.ita {
+  color: maroon;
+  font-style: italic;
+}
+
+.content-gallery {
+  font-family: "Parisienne", sans-serif;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  text-align: center; /* Optional: centers the text itself */  
+}
+.gallery-button {
+  color: lightseagreen;
+  display: flex;
+  flex-wrap: wrap;
+  border-width: 5px;
+  border-style:groove; 
+  border-radius: 25px;
+  background-color: #f0f0f0;
+}
+.gallery-button:hover {
+  transform: scale(1.05);
+}
+
+.content-subscribe {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  border-width: 5px;
+  border-style:dashed; 
+  border-radius: 25px;
+  border-color: maroon;
+}
+
+.column-1 {
+  flex: 1;
+  width: 100%;
+  min-width: 350px; 
+  box-sizing: border-box; 
+  display: flex;
+  justify-content: left; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  text-align: left; /* Optional: centers the text itself */  
+}
+
+.column-2 {
+  flex: 2;
+  width: 100%;
+  min-width: 300px; 
+  box-sizing: border-box; 
+}
+
+@media (max-width: 800px) {
+  .content-subscribe {
+    flex-direction: column; /* Stacks the columns vertically */
+  }
+  .column-1, .column-2 {
+    width: 100%;
+  }
 }
