@@ -16,13 +16,13 @@ const DonationUpdate: React.FC = () => {
       </p>
       <h3>Donation Calculations and Observations:</h3>
       <p>
-        We received €8,xxx from GoFundMe. GoFundMe charges a whopping 2.9% fee
+        We received €8,315 from GoFundMe. GoFundMe charges a whopping 2.9% fee
         for private funding. That’s a lot to pay for the convenience of the
         platform! Next time, it might be better to set up an alternative or a
         personal website.
       </p>
       <p>
-        We also received €xxxx in alternative donations from people who didn’t
+        We also received €890 in alternative donations from people who didn’t
         want to use the platform, in the form of cash, bank transfers, and
         crypto transfers.
       </p>

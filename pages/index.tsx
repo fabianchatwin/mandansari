@@ -70,11 +70,11 @@ export default function Home() {
           <div className="content-subscribe">
             <div className="column-1">
                 <h2>
-                  Collected: 9,900 euro!
+                  Collected: 9,205 euro!
                   <p></p>
                   Thank you all!
                   <p></p>
-                  Enter your email to know what we are going to do with this money!
+                  Enter your email to know what to do with this money!
                 </h2>
                       
             </div>
@@ -84,8 +84,8 @@ export default function Home() {
             height="330" 
             src="https://3fa9f914.sibforms.com/serve/MUIFAMFiOEZeTr-xFQkL0kgNOiMmLa6dNH-DzvhT-WtoaHyxzwEiBh2lD45uBuJ4aVHiZqrcla3c-WKqWhWpecjKI4hxftV3Xq-SsRuNtNwlVvYtzjgS5g-n2ctRoWFHN8Qux-rRw3_iujM0nlFnDjUUUiFzhT09py2qQBfCEei1QMfi3hyNIVoLpdaGBMOXuK926tqfhqzoS4rn"
               frameBorder="0"
-              scrolling="auto"
               allowFullScreen
+              scrolling="auto"
               style={{
                 display: "block",
                 marginLeft: "auto",
