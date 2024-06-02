@@ -70,26 +70,16 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
   const handleFullscreen = () => {
     const elem = document.documentElement;
     if (
-      !document.fullscreenElement && // alternative standard method
-      !document.webkitFullscreenElement &&
-      !document.msFullscreenElement
-    ) {
+      !document.fullscreenElement
+      ) {
       // current working methods
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-      }
+      } 
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      }
+      } 
     }
   };
 
