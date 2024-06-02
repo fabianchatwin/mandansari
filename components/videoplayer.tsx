@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 declare global {
   interface Window {
     onYouTubeIframeAPIReady?: () => void;
+    YT?: { Player: any; }
   }
 }
 
