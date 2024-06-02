@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@getbrevo/brevo": "^2.1.1",
+    "@netlify/plugin-nextjs": "^5.3.2",
     "cloudinary": "^2.2.0",
     "cypress": "^10.0.3",
     "next": "^12.1.4",
