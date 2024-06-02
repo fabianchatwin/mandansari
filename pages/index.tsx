@@ -1,37 +1,55 @@
 import FeedbackForm from "@components/FeedbackForm";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import BrevoForm from "@components/BrevoForm";
 import DonationUpdate1 from "@components/DonationUpdate1";
 
+const images = [
+  "lot_people-15.jpg",
+  "group_1-15.jpg",
+  "group_2-15.jpg",
+  "group_3-15.jpg",
+  "group_4-15.jpg"
+];
+
 export default function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const slideshowImageRef = useRef<HTMLImageElement>(null);  
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+      // Fade out the current image
+      if (slideshowImageRef.current) {
+        slideshowImageRef.current.classList.add('fade-out');
+      }
 
-  const images = [
-    "lot_people.jpg",
-    "group_1.jpg",
-    "group_2.jpg",
-    "group_3.jpg",
-  ];
+      // Change the image source after the fade-out transition
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+
+        if (slideshowImageRef.current) {
+          slideshowImageRef.current.src = `/${images[(currentIndex + 1) % images.length]}`;
+
+          // Fade in the new image
+          slideshowImageRef.current.classList.remove('fade-out');
+        }
+      }, 1000); // This timeout should match the transition duration in CSS
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+
 
   return (
     <>
       <div className="container">
         <div className="photo-wrapper">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Image ${index + 1}`}
-              className={`front-image ${index === currentImageIndex ? "active" : "inactive"}`}
-            />
-          ))}
+        <img
+          src={`/${images[currentIndex]}`}
+          className="front-image"
+          id="slideshow-image"
+          ref={slideshowImageRef}
+        />
         </div>
         <div className="content-wrapper">
           <h2>
