@@ -1,6 +1,6 @@
 // ./netlify/functions/cloudinary.js
 
-const { v2 as cloudinary } = require("cloudinary");
+import { v2 as cloudinary } from "cloudinary";
 
 cloudinary.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
