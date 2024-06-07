@@ -82,13 +82,13 @@ export default function Home() {
           <div className="content-gallery" onClick={handleGalleryClick} style={{ cursor: "pointer" }}>
             <h2 className="gallery-button">Wedding Photo Gallery</h2>
           </div>
-          <h1>
+          <h2>
             The fafalala Support Network is the crowdfunding project started at Fabian and Lia wedding.
             <p></p>
             <div className="ita">
               Our mission is to empower less fortunate individuals with opportunities for growth and advancement.
             </div>
-          </h1>
+          </h2>
           <div className="content-subscribe">
             <div className="column-1">
               <h2>

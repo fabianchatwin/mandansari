@@ -82,7 +82,7 @@ hr {
 
 .content-gallery {
   font-family: "Pacifico", sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -99,8 +99,8 @@ hr {
   color: #FF7D29;
   display: flex;
   flex-wrap: wrap;
-  border-width: 5px;
-  border-style:groove; 
+  border-width: 1px;
+  border-style: solid; 
   border-radius: 25px;
   background-color: #FFEEA9;
 }
