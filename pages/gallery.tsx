@@ -70,6 +70,7 @@ export default function Intro() {
   const renderFolders = showSubfolders
     ? folderMap[selectedFolder || ""]?.subfolders
     : ["Alice", "ALLVIDEOS", "WhatsappPhotos", "WHATSAPPVIDEOS"];
+    
   const buttonLabels = showSubfolders
     ? folderMap[selectedFolder || ""]?.customLabels
     : [
@@ -78,7 +79,7 @@ export default function Intro() {
         "WHATSAPP GROUP PHOTOS",
         "WHATSAPP GROUP VIDEOS",
       ];
-  console.log("HHHH " + selectedFolder + " " + showSubfolders);
+
   if (selectedFolder && !showSubfolders) {
     return <GalleryList folder={selectedFolder} onBack={handleBackToButtons} />;
   }
