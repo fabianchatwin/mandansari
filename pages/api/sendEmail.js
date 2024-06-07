@@ -37,7 +37,7 @@ exports.handler = async (event) => {
     service: "Gmail",
     auth: {
       user: "fabianchatwin@gmail.com",
-      pass: "ilqf vshv ojxe bhyh",
+      pass: "",
     },
   });
 
