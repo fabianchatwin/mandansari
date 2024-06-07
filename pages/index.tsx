@@ -119,7 +119,7 @@ export default function Home() {
             <a href="https://gofund.me/b734c85c">Our original crowdfunding project</a>
           </h2>
           <hr></hr>
-          <div className="textLeft">
+          <div className="textLeft content-blog">
             <DonationUpdate1 />
           </div>
         </div>

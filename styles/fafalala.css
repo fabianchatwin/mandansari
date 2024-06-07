@@ -115,7 +115,8 @@ hr {
   border-width: 5px;
   border-style:dashed; 
   border-radius: 25px;
-  border-color: maroon;
+  margin: 0px 20px;
+  border-color: #FF7D29;
 }
 
 .column-1 {
@@ -148,4 +149,8 @@ hr {
 .brevo-form {
   width: 560px; 
   height: 330px; 
+}
+
+.content-blog{
+  margin: 0px 20px;
 }
