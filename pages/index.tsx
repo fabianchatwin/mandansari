@@ -29,7 +29,7 @@ export default function Home() {
           slideshowImageRef.current.src = `/${images[(currentIndex + 1) % images.length]}`;
           slideshowImageRef.current.classList.remove("fade-out");
         }
-      }, 1000);
+      }, 500);
     }, 5000);
 
     return () => clearInterval(interval);

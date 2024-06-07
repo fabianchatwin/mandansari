@@ -38,12 +38,12 @@ body,
   height: auto;
   max-height: 668px;
   object-fit: contain;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
   opacity: 1;  
 }
 
 .front-image.animating {
-  animation: zoomPanFront 6s ease-in-out infinite;
+  animation: zoomPanFront 5.5s ease-in-out infinite;
   }
   
   @keyframes zoomPanFront {
@@ -68,9 +68,9 @@ h1, h2 {
 
 hr {
   width: 20%;
-  border: none; /* Remove the default border */
-  border-top: 1px solid maroon; /* Create a dashed line with specified color */
-  margin: 0 auto; /* Center the hr */
+  border: none; 
+  border-top: 1px solid maroon;
+  margin: 0 auto;
 }
 
 .ita {
