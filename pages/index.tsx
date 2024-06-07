@@ -39,18 +39,26 @@ export default function Home() {
     const resizeBrevoForm = () => {
       const column2 = document.querySelector(".column-2");
       if (column2 && brevoFormRef.current) {
-        const column2Width = column2.clientWidth;
-        const formWidth = column2Width - 50; // Adjust as needed
-        const formHeight = formWidth * (3 / 4); // Example aspect ratio adjustment
+        const formWidth = column2.clientWidth;
+        let formHeight = 330; 
+        if (formWidth < 560) {
+          formHeight = 360;
+        }
+        if (formWidth < 530) {
+          formHeight = 380;
+        }
+        if (formWidth < 520) {
+          formHeight = 400;
+        }
+        if (formWidth < 440) {
+          formHeight = 450;
+        }
         brevoFormRef.current.style.width = `${formWidth}px`;
         brevoFormRef.current.style.height = `${formHeight}px`;
       }
     };
 
-    // Initial resize
     resizeBrevoForm();
-
-    // Resize on window resize
     window.addEventListener("resize", resizeBrevoForm);
     return () => window.removeEventListener("resize", resizeBrevoForm);
   }, []);

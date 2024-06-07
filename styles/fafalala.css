@@ -127,7 +127,7 @@ hr {
   box-sizing: border-box; 
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .content-subscribe {
     flex-direction: column;
   }
