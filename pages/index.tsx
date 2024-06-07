@@ -1,7 +1,5 @@
-import FeedbackForm from "@components/FeedbackForm";
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
-import BrevoForm from "@components/BrevoForm";
 import DonationUpdate1 from "@components/DonationUpdate1";
 
 const images = [
@@ -9,18 +7,19 @@ const images = [
   "group_1-15.jpg",
   "group_2-15.jpg",
   "group_3-15.jpg",
-  "group_4-15.jpg"
+  "group_4-15.jpg",
 ];
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slideshowImageRef = useRef<HTMLImageElement>(null);  
+  const slideshowImageRef = useRef<HTMLImageElement>(null);
+  const brevoFormRef = useRef<HTMLIFrameElement>(null);
   const router = useRouter();
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (slideshowImageRef.current) {
-        slideshowImageRef.current.classList.add('fade-out');
+        slideshowImageRef.current.classList.add("fade-out");
       }
 
       setTimeout(() => {
@@ -28,13 +27,33 @@ export default function Home() {
 
         if (slideshowImageRef.current) {
           slideshowImageRef.current.src = `/${images[(currentIndex + 1) % images.length]}`;
-          slideshowImageRef.current.classList.remove('fade-out');
+          slideshowImageRef.current.classList.remove("fade-out");
         }
       }, 1000);
     }, 5000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
+
+  useEffect(() => {
+    const resizeBrevoForm = () => {
+      const column2 = document.querySelector(".column-2");
+      if (column2 && brevoFormRef.current) {
+        const column2Width = column2.clientWidth;
+        const formWidth = column2Width - 50; // Adjust as needed
+        const formHeight = formWidth * (3 / 4); // Example aspect ratio adjustment
+        brevoFormRef.current.style.width = `${formWidth}px`;
+        brevoFormRef.current.style.height = `${formHeight}px`;
+      }
+    };
+
+    // Initial resize
+    resizeBrevoForm();
+
+    // Resize on window resize
+    window.addEventListener("resize", resizeBrevoForm);
+    return () => window.removeEventListener("resize", resizeBrevoForm);
+  }, []);
 
   const handleGalleryClick = () => {
     router.push("/gallery");
@@ -44,65 +63,54 @@ export default function Home() {
     <>
       <div className="container">
         <div className="photo-wrapper">
-        <img
-          src={`/${images[currentIndex]}`}
-          className="front-image animating"
-          id="slideshow-image"
-          ref={slideshowImageRef}
-        />
+          <img
+            src={`/${images[currentIndex]}`}
+            className="front-image animating"
+            id="slideshow-image"
+            ref={slideshowImageRef}
+          />
         </div>
         <div className="content-wrapper">
-
           <div className="content-gallery" onClick={handleGalleryClick} style={{ cursor: "pointer" }}>
             <h2 className="gallery-button">Wedding Photo Gallery</h2>
           </div>
-
           <h1>
-            The fafalala Support Network is the crowdfunding project started at
-            Fabian and Lia wedding.
+            The fafalala Support Network is the crowdfunding project started at Fabian and Lia wedding.
             <p></p>
             <div className="ita">
-              Our mission is to empower less fortunate individuals with
-              opportunities for growth and advancement.
+              Our mission is to empower less fortunate individuals with opportunities for growth and advancement.
             </div>
           </h1>
-
           <div className="content-subscribe">
             <div className="column-1">
-                <h2>
-                  Collected: 9,205 euro!
-                  <p></p>
-                  Thank you all!
-                  <p></p>
-                  Enter your email to know what to do with this money!
-                </h2>
-                      
+              <h2>
+                Collected: 9,205 euro!
+                <p></p>
+                Thank you all!
+                <p></p>
+                Enter your email to know what to do with this money!
+              </h2>
             </div>
             <div className="column-2">
-          <iframe 
-            width="560" 
-            height="330" 
-            src="https://3fa9f914.sibforms.com/serve/MUIFAMFiOEZeTr-xFQkL0kgNOiMmLa6dNH-DzvhT-WtoaHyxzwEiBh2lD45uBuJ4aVHiZqrcla3c-WKqWhWpecjKI4hxftV3Xq-SsRuNtNwlVvYtzjgS5g-n2ctRoWFHN8Qux-rRw3_iujM0nlFnDjUUUiFzhT09py2qQBfCEei1QMfi3hyNIVoLpdaGBMOXuK926tqfhqzoS4rn"
-              frameBorder="0"
-              allowFullScreen
-              scrolling="auto"
-              style={{
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-            ></iframe>
-              
-              </div>
+              <iframe
+                ref={brevoFormRef}
+                className="brevo-form"
+                src="https://3fa9f914.sibforms.com/serve/MUIFAMFiOEZeTr-xFQkL0kgNOiMmLa6dNH-DzvhT-WtoaHyxzwEiBh2lD45uBuJ4aVHiZqrcla3c-WKqWhWpecjKI4hxftV3Xq-SsRuNtNwlVvYtzjgS5g-n2ctRoWFHN8Qux-rRw3_iujM0nlFnDjUUUiFzhT09py2qQBfCEei1QMfi3hyNIVoLpdaGBMOXuK926tqfhqzoS4rn"
+                frameBorder="0"
+                allowFullScreen
+                scrolling="auto"
+                style={{
+                  display: "block",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              ></iframe>
+            </div>
           </div>
-
           <h2>
-            <a href="https://gofund.me/b734c85c">
-              Our original crowdfunding project
-            </a>
+            <a href="https://gofund.me/b734c85c">Our original crowdfunding project</a>
           </h2>
           <hr></hr>
-
           <div className="textLeft">
             <DonationUpdate1 />
           </div>
