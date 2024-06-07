@@ -80,12 +80,19 @@ hr {
 
 .content-gallery {
   font-family: "Parisienne", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Centers the content vertically */
-  text-align: center; /* Optional: centers the text itself */  
+  justify-content: center;
+  align-items: center; 
+  text-align: center; 
 }
+
+@media (max-width: 440px) {
+  .content-gallery {
+    font-size: 1.2rem;
+  }
+}
+
 .gallery-button {
   color: lightseagreen;
   display: flex;
