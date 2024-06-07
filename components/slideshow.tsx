@@ -4,6 +4,7 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(startIndex);
   const [isPaused, setIsPaused] = useState(false);
+  const [isCover, setIsCover] = useState(false);
   const [secondsRemaining, setSecondsRemaining] = useState(5);
   const touchStartX = useRef(null);
 
@@ -51,6 +52,10 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
     setIsPaused((prevPaused) => !prevPaused);
   };
 
+  const toggleCover = () => {
+    setIsCover((prevCover) => !prevCover);
+  };
+
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -58,10 +63,8 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
   const handleTouchEnd = (e) => {
     if (!isPaused) {
       if (touchStartX.current - e.changedTouches[0].clientX > 50) {
-        // Swipe left
         nextImage();
       } else if (e.changedTouches[0].clientX - touchStartX.current > 50) {
-        // Swipe right
         prevImage();
       }
     }
@@ -72,7 +75,6 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
     if (
       !document.fullscreenElement
       ) {
-      // current working methods
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
       } 
@@ -103,9 +105,11 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
                 key={index}
                 src={image}
                 alt={`Image ${index + 1}`}
-                className={`gallery-front-image ${
-                  index === currentImageIndex ? "active" : "inactive"
-                } ${index === currentImageIndex && !isPaused ? "animating" : ""}`}
+                className={ `gallery-front-image 
+                  ${index === currentImageIndex ? "active" : "inactive"} 
+                  ${index === currentImageIndex && !isPaused ? "animating" : ""}
+                  ${isCover ? "gallery-cover" : "gallery-contain"}
+                  `}
               />
             ))}
           </div>
@@ -125,6 +129,13 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
           >
             FULLSCREEN
           </button>
+          <button
+            className="gallery-fit-button"
+            onClick={toggleCover}
+          >
+            {isCover ? "COVER" : "CONTAIN"}
+          </button>
+
         </>
       )}
     </div>
