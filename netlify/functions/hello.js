@@ -1,7 +1,8 @@
-export default function handler(req, res) {
+export const handler = async (event) => {
   return {
-    statusCode: 200,
-    body: "Hello World yeah"
-      }
+      statusCode: 200,
+      body: "Hello World yeah"
   }
+}
+
   
