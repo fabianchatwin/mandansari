@@ -74,10 +74,10 @@ export default function Intro() {
   const buttonLabels = showSubfolders
     ? folderMap[selectedFolder || ""]?.customLabels
     : [
-        "OFFICIAL PHOTOS",
-        "OFFICIAL VIDEOS",
-        "WHATSAPP GROUP PHOTOS",
-        "WHATSAPP GROUP VIDEOS",
+        "Official Photos",
+        "Official Videos",
+        "Contributed Photos",
+        "Contributed Videos",
       ];
 
   if (selectedFolder && !showSubfolders) {
