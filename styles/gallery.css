@@ -264,7 +264,7 @@ animation: zoomPan 10s ease-in-out infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
   border: 1px solid #FFBF78;
   background-color: #FFEEA9;
   opacity: 0;
