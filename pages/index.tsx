@@ -46,7 +46,7 @@ export default function Home() {
         <div className="photo-wrapper">
         <img
           src={`/${images[currentIndex]}`}
-          className="front-image"
+          className="front-image animating"
           id="slideshow-image"
           ref={slideshowImageRef}
         />
