@@ -103,7 +103,7 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
                 key={index}
                 src={image}
                 alt={`Image ${index + 1}`}
-                className={`front-image ${
+                className={`gallery-front-image ${
                   index === currentImageIndex ? "active" : "inactive"
                 } ${index === currentImageIndex && !isPaused ? "animating" : ""}`}
               />
