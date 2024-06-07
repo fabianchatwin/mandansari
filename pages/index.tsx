@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <>
       <div className="container">
-        <div className="photo-wrapper">
+        <div className="photo-wrapper" onClick={handleGalleryClick} >
           <img
             src={`/${images[currentIndex]}`}
             className="front-image animating"
