@@ -58,6 +58,10 @@ export default function Home() {
     router.push("/gallery");
   };
 
+  const goFundme = () => {
+    router.push("https://gofund.me/b734c85c");
+  };
+
   return (
     <>
       <div className="container">
@@ -84,11 +88,11 @@ export default function Home() {
             <div className="column-1">
               <h2>
                 Collected: 9,205 euro!
+                <br></br>
+                <button onClick={goFundme}>CONTRIBUTE!</button>
                 <p></p>
-                Thank you all!
-                <p></p>
-                Enter your email to follow what we do with this money!
-              </h2>
+                 Enter your email to follow what we do with this money!
+                </h2>
             </div>
             <div className="column-2">
               <iframe
@@ -107,7 +111,6 @@ export default function Home() {
             </div>
           </div>
           <h2>
-            <a href="https://gofund.me/b734c85c">Our original crowdfunding project</a>
           </h2>
           <hr></hr>
           <div className="textLeft content-blog">

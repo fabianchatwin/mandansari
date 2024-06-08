@@ -98,7 +98,11 @@ hr {
   margin: 0 auto;
 }
 
-button:not(.gallery-container button) {
+button {
+  cursor: pointer;
+}
+
+button:not(.gallery-container button, .content-subscribe button) {
   flex: 1;
   width: 100%;
   display: flex;
@@ -108,9 +112,22 @@ button:not(.gallery-container button) {
   border: 1px solid var(--dark-color);
   background-color: var(--other-color);
   border-radius: 10px;
-  cursor: pointer;
   font-family: "Pacifico", sans-serif;
   color: var(--dark-color);
+}
+
+.content-subscribe button {
+  border: none;
+  border-radius: 6px;
+  background-color: var(--other-color);
+  cursor: pointer;
+  font-family: "Helvetica", sans-serif;
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: 16px;
+  min-height: 40px;
+  line-height: 23px;
+  padding: 8px 16px;
 }
 
 .ita {
