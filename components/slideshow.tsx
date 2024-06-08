@@ -88,7 +88,7 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
   return (
     <div className="gallery-container">
       <button className="gallery-go-list-button" onClick={onBack}>
-        BACK TO GALLERY LIST
+        EXIT
       </button>
       {images.length > 0 && (
         <>

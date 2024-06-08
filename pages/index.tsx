@@ -75,7 +75,7 @@ export default function Home() {
         </div>
         <div className="content-wrapper">
           <div className="content-gallery" onClick={handleGalleryClick} style={{ cursor: "pointer" }}>
-            <h2 className="gallery-button">Wedding Photo Gallery</h2>
+            <h2 className="gallery-button">Wedding Gallery</h2>
           </div>
           <h2>
             The fafalala Support Network is the crowdfunding project started at Fabian and Lia wedding.
@@ -111,16 +111,13 @@ export default function Home() {
             </div>
           </div>
           <div className="textLeft content-blog">
-            <h2>Thank you all for your donations!</h2>
-            <p>
-              Thank you for participating to our wedding weekend! It was wonderful to see everyone together, reconnecting with old friends and building
-              new connections.
-            </p>
-            <p> Your contributions have been abundant and generous.
-              Lia and I now have the responsibility to manage your donations. We will
-              keep you updated on how we plan to use the money we have received. Join our mailing list to follow the story!
-            </p>
-            <hr></hr>
+          <h2>Thank you all for your donations!</h2>
+<p>
+  Thank you for participating in our wedding weekend! It was wonderful to see everyone together, reconnecting with old friends, and building new connections.
+</p>
+<p>
+  Your contributions have been abundant and generous. Lia and Fabian now have the responsibility to manage your donations. We will keep you updated on how we plan to use the money we have received. Join our mailing list to follow the story!
+</p>
             <DonationUpdate1 />
           </div>
         </div>

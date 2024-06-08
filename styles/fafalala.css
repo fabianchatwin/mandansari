@@ -133,9 +133,8 @@ button:not(.gallery-container button, .content-subscribe button, .content-blog b
 }
 
 .content-blog button {
-  width: 50px;
+  min-width: 200px;
   text-align: center;
-  margin-left: 10px;
 }
 
 .ita {
@@ -218,6 +217,17 @@ button:not(.gallery-container button, .content-subscribe button, .content-blog b
   margin: 0px 20px;
 }
 
+.content-donation {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+}
+
+.content-donation.active {
+  opacity: 1;
+  display: block;
+}
+
 .footer {
   background-color: var(--other-color);
   color: var(--darker-color);
@@ -228,7 +238,20 @@ button:not(.gallery-container button, .content-subscribe button, .content-blog b
 }
 
 .footer-spacer {
-  margin: 100px 0;
+  margin: 30px 0;
 }
 
+.vert-space {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  line-height: 1.5;
+}
 
+.donation-button-container{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.donation-button-container button {
+
+}
