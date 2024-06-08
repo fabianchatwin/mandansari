@@ -1,33 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 
-const DonationUpdate: React.FC = () => {
+interface DonationProps {
+  isEnglish: boolean;
+}
 
-  const [isEnglish, setIsEnglish] = useState(true);
-
-  const toggleLanguage = () => {
-    setIsEnglish(!isEnglish);
-  };
-
-  /*
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: top,
-        left: 0,
-        behavior: 'smooth'
-      });
-    }
-  };
-*/
+const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
   return (
     <>
-    <div className="donation-button-container">
-        <button onClick={toggleLanguage}>
-          {isEnglish ? '🇮🇹 Italiano' : '🇬🇧 English'}
-        </button>
-    </div>
       <div id="eng" className={`content-donation ${isEnglish ? 'active' : ''}`}>
       <h3>Update 2 June 2024
       </h3>

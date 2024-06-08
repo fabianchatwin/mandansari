@@ -101,7 +101,11 @@ button {
   cursor: pointer;
 }
 
-button:not(.gallery-container button, .content-subscribe button, .content-blog button) {
+button:not(
+    .gallery-container button, 
+    .content-subscribe button, 
+    .content-blog button, 
+    .donation-button-container button) {
   flex: 1;
   width: 100%;
   display: flex;
@@ -115,7 +119,7 @@ button:not(.gallery-container button, .content-subscribe button, .content-blog b
   color: var(--dark-color);
 }
 
-.content-subscribe button, .content-blog button {
+.content-subscribe button {
   border: none;
   border-radius: 6px;
   background-color: var(--other-color);
@@ -137,6 +141,33 @@ button:not(.gallery-container button, .content-subscribe button, .content-blog b
   text-align: center;
 }
 
+.donation-button-container{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+  transform: translateY(-50%); 
+}
+
+.donation-button-container button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+@media (max-width: 500px) {
+  .content-gallery {
+    flex-direction: column; /* Change layout to column */
+  }
+
+  .donation-button-container {
+    position: static; /* Reset position */
+    margin-top: 20px; /* Add margin to separate from the content above */
+  }
+}
+
 .ita {
   color: var(--dark-color);;
   font-style: italic;
@@ -149,6 +180,7 @@ button:not(.gallery-container button, .content-subscribe button, .content-blog b
   justify-content: center;
   align-items: center; 
   text-align: center; 
+  position: relative;
 }
 
 @media (max-width: 440px) {
@@ -159,12 +191,12 @@ button:not(.gallery-container button, .content-subscribe button, .content-blog b
 
 .gallery-button {
   color: var(--dark-color);
-  display: flex;
-  flex-wrap: wrap;
   border-width: 1px;
   border-style: solid; 
   border-radius: 25px;
   background-color: var(--other-color);
+  margin-left: auto;
+  margin-right: auto;
 }
 .gallery-button:hover {
   transform: scale(1.05);
@@ -247,11 +279,15 @@ button:not(.gallery-container button, .content-subscribe button, .content-blog b
   line-height: 1.5;
 }
 
-.donation-button-container{
-    text-align: center;
-    margin-bottom: 20px;
+.uk-flag,
+.ita-flag {
+  opacity: 0.5; /* Default opacity for both flags */
 }
 
-.donation-button-container button {
+.uk-flag.active {
+  opacity: 1; /* Full opacity for UK flag when isEnglish is true */
+}
 
+.ita-flag.active {
+  opacity: 1; /* Full opacity for Italian flag when isEnglish is false */
 }
