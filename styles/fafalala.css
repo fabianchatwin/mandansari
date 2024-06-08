@@ -146,7 +146,6 @@ button:not(
   right: 0px;
   top: 50%;
   text-align: center;
-  margin-bottom: 20px;
   transform: translateY(-50%); 
 }
 
@@ -156,18 +155,18 @@ button:not(
   cursor: pointer;
   font-size: 3rem;
 }
-
+/*
 @media (max-width: 500px) {
   .content-gallery {
-    flex-direction: column; /* Change layout to column */
+    flex-direction: column;
   }
 
   .donation-button-container {
-    position: static; /* Reset position */
-    margin-top: 20px; /* Add margin to separate from the content above */
+    position: static;
+    margin-top: 20px;
   }
 }
-
+*/
 .ita {
   color: var(--dark-color);;
   font-style: italic;
