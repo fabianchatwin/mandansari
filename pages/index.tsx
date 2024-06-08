@@ -96,7 +96,7 @@ export default function Home() {
                 <p></p>
                 Thank you all!
                 <p></p>
-                Enter your email to know what to do with this money!
+                Enter your email to follow what we do with this money!
               </h2>
             </div>
             <div className="column-2">
