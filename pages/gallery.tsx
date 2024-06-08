@@ -85,9 +85,10 @@ export default function Intro() {
   }
 
   return (
+    <div className="container">
     <div className="gallery-list-container">
       {!showSubfolders && (
-        <div className="gallery-open-button  video-container">
+        <button className="gallery-open-button  video-container">
           {/*<VideoPlayer videoId="PCPPEn2EGh4" /> // youtube video */}
           <video
             src="https://fafalala.org/LIAFABIAN2024-10000.mp4"
@@ -96,7 +97,7 @@ export default function Intro() {
             muted
             className="gallery-open-video"
           />
-        </div>
+        </button>
       )}
       {renderFolders.map((folder, index) => (
         <button
@@ -115,6 +116,7 @@ export default function Intro() {
       >
         {showSubfolders ? "Back" : "Home"}
       </button>
+    </div>
     </div>
   );
 }

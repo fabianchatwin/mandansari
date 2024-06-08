@@ -92,9 +92,9 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
       </button>
       {images.length > 0 && (
         <>
-          <div className="gallery-counter">
+          <button className="gallery-counter-button">
             {currentImageIndex + 1} / {images.length}
-          </div>
+          </button>
           <div
             className="gallery-photo-wrapper"
             onTouchStart={handleTouchStart}
@@ -122,7 +122,7 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
           <button className="gallery-pause-button" onClick={togglePause}>
             {isPaused ? "PLAY" : "PAUSE"}
           </button>
-          <div className="gallery-timer">{secondsRemaining}</div>
+          <button className="gallery-timer-button">{secondsRemaining}</button>
           <button
             className="gallery-fullscreen-button"
             onClick={handleFullscreen}

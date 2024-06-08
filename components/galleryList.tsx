@@ -47,7 +47,7 @@ export default function GalleryList({ folder, onBack }) {
           style={{ animationDelay: "1s" }}
           onClick={onBack}
         >
-          {"WEDDING GALLERY"}
+          {"Back"}
         </button>
         {!isVideoFolder && (
           <button
@@ -55,7 +55,7 @@ export default function GalleryList({ folder, onBack }) {
             style={{ animationDelay: "1s" }}
             onClick={() => startSlideshow(0)}
           >
-            START SLIDESHOW
+            Slideshow
           </button>
         )}
       </div>

@@ -88,109 +88,83 @@ animation: zoomPan 10s ease-in-out infinite;
   object-fit: contain;
 }
 
+.gallery-container button {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+  z-index: 10;
+}
 
 .gallery-prev-button,
 .gallery-next-button {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  border: none;
   padding: 10px;
   cursor: pointer;
-  z-index: 10;
-  padding: 10px;
   font-size: x-large;
   font-weight: bold;
+  height: 200px;
 }
 
 .gallery-prev-button {
   left: 0px;
-  height: 200px;
-  border-radius: 4px;
 }
 
 .gallery-next-button {
   right: 0px;
-  height: 200px;
-  border-radius: 4px;
 }
 
-.gallery-counter {
-  position: absolute;
+.gallery-counter-button {
   top: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  z-index: 10;
 }
 
+
 .gallery-fullscreen-button {
-  position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .gallery-fit-button {
-  position: absolute;
   bottom: 50px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
-
 
 .gallery-pause-button {
-  position: absolute;
-  top: 10px; /* Adjust top position */
-  left: 10px; /* Adjust left position */
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 10;
+  top: 10px;
+  left: 10px;
 }
 
-.gallery-timer {
-  position: absolute;
-  top: 40px; /* Adjust top position */
-  left: 10px; /* Adjust left position */
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 10;
+.gallery-timer-button {
+  top: 40px;
+  left: 10px;
 }
 
 .gallery-go-list-button {
-  position: absolute;
-  bottom: 10px; /* Adjust top position */
-  left: 10px; /* Adjust left position */
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 10;
+  bottom: 10px;
+  left: 10px;
 }
+
+.gallery-list-button {
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+  min-height: 60px;
+}
+
+.left-button {
+  animation-name: slideInLeft;
+  margin-right: 10px;
+}
+
+.right-button {
+  animation-name: slideInRight;
+  margin-left: 10px;
+}
+
 
 .gallery-list-container {
   height: 100vh;
@@ -211,30 +185,6 @@ animation: zoomPan 10s ease-in-out infinite;
   padding: 20px;
 }
 
-.gallery-list-button {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  opacity: 0;
-  cursor: pointer;
-  animation: slideIn 0.5s forwards;
-  min-height: 60px;
-}
-
-.left-button {
-  animation-name: slideInLeft;
-  margin-right: 10px;
-}
-
-.right-button {
-  animation-name: slideInRight;
-  margin-left: 10px;
-}
 
 @keyframes slideInLeft {
   from {
@@ -259,29 +209,14 @@ animation: zoomPan 10s ease-in-out infinite;
 }
 
 .gallery-open-button {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  border: 1px solid var(--dark-color);
-  background-color: var(--other-color);
   opacity: 0;
-  border-radius: 10px;
-  cursor: pointer;
   transform: translateX(100%);
   animation: slideIn 0.5s forwards;
-  font-family: "Pacifico", sans-serif;
   color: var(--dark-color);
 }
 
 .gallery-open-video {
   height: 200px;
-}
-
-.black-button {
-  background-color: black;
 }
 
 @keyframes slideIn {

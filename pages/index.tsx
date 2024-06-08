@@ -24,7 +24,6 @@ export default function Home() {
 
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-
         if (slideshowImageRef.current) {
           slideshowImageRef.current.src = `/${images[(currentIndex + 1) % images.length]}`;
           slideshowImageRef.current.classList.remove("fade-out");
@@ -41,18 +40,10 @@ export default function Home() {
       if (column2 && brevoFormRef.current) {
         const formWidth = column2.clientWidth;
         let formHeight = 330; 
-        if (formWidth < 560) {
-          formHeight = 360;
-        }
-        if (formWidth < 530) {
-          formHeight = 380;
-        }
-        if (formWidth < 520) {
-          formHeight = 400;
-        }
-        if (formWidth < 440) {
-          formHeight = 450;
-        }
+        if (formWidth < 560) formHeight = 360;
+        if (formWidth < 530) formHeight = 380;
+        if (formWidth < 520) formHeight = 400;
+        if (formWidth < 440) formHeight = 450;
         brevoFormRef.current.style.width = `${formWidth}px`;
         brevoFormRef.current.style.height = `${formHeight}px`;
       }
