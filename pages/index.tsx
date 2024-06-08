@@ -87,11 +87,11 @@ export default function Home() {
           <div className="content-subscribe">
             <div className="column-1">
               <h2>
-                Collected: 9,205 euro!
+                Collected: 9,205 euro
                 <br></br>
-                <button onClick={goFundme}>CONTRIBUTE!</button>
+                <button onClick={goFundme}>SUPPORT US</button>
                 <p></p>
-                 Enter your email to follow what we do with this money!
+                 Join the mailing list to follow what we do with this money!
                 </h2>
             </div>
             <div className="column-2">
@@ -110,12 +110,25 @@ export default function Home() {
               ></iframe>
             </div>
           </div>
-          <h2>
-          </h2>
-          <hr></hr>
           <div className="textLeft content-blog">
+            <h2>Thank you all for your donations!</h2>
+            <p>
+              Thank you for participating to our wedding weekend! It was wonderful to see everyone together, reconnecting with old friends and building
+              new connections.
+            </p>
+            <p> Your contributions have been abundant and generous.
+              Lia and I now have the responsibility to manage your donations. We will
+              keep you updated on how we plan to use the money we have received. Join our mailing list to follow the story!
+            </p>
+            <hr></hr>
             <DonationUpdate1 />
           </div>
+        </div>
+          <div className="footer-spacer">&nbsp;</div>
+          <div className="footer">
+          Fafalala is not an official organization (yet) but just a group of friends that want to do something good. 
+          <br></br>
+          Reach us on gmail at fabianchatwin or liamandansari22.
         </div>
       </div>
     </>
