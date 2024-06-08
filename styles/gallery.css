@@ -265,15 +265,15 @@ animation: zoomPan 10s ease-in-out infinite;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  border: 1px solid #FFBF78;
-  background-color: #FFEEA9;
+  border: 1px solid var(--dark-color);
+  background-color: var(--other-color);
   opacity: 0;
   border-radius: 10px;
   cursor: pointer;
   transform: translateX(100%);
   animation: slideIn 0.5s forwards;
   font-family: "Pacifico", sans-serif;
-  color: #FF7D29;
+  color: var(--dark-color);
 }
 
 .gallery-open-video {
