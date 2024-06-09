@@ -148,7 +148,7 @@ const Program: React.FC = () => {
         </div>
         <div>
           <h1>
-            <img src="/hongkong1.jpg" className="smallimage" />
+            <img src="https://media.fafalala.org/hongkong1.jpg" className="smallimage" />
             <br></br>
             🎉🥂
           </h1>

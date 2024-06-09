@@ -73,7 +73,7 @@ export default function Home() {
       <div className="container">
         <div className="photo-wrapper" onClick={handleGalleryClick} >
           <img
-            src={`/${images[currentIndex]}`}
+            src={`https://media.fafalala.org/${images[currentIndex]}`}
             className="front-image animating"
             id="slideshow-image"
             ref={slideshowImageRef}
