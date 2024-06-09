@@ -142,18 +142,14 @@ button:not(
 }
 
 .donation-button-container{
-  position: absolute;
-  right: 0px;
-  top: 50%;
   text-align: center;
-  transform: translateY(-50%); 
 }
 
 .donation-button-container button{
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 /*
 @media (max-width: 500px) {
@@ -176,6 +172,7 @@ button:not(
   font-family: "Pacifico", sans-serif;
   font-size: 1rem;
   display: flex;
+  flex-direction: column;  
   justify-content: center;
   align-items: center; 
   text-align: center; 
@@ -192,10 +189,13 @@ button:not(
   color: var(--dark-color);
   border-width: 1px;
   border-style: solid; 
-  border-radius: 25px;
+  border-radius: 6px;
   background-color: var(--other-color);
   margin-left: auto;
   margin-right: auto;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  margin: 10px;
 }
 .gallery-button:hover {
   transform: scale(1.05);

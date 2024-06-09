@@ -69,7 +69,7 @@ export default function Home() {
 
 
   return (
-    <>
+    <>  
       <div className="container">
         <div className="photo-wrapper" onClick={handleGalleryClick} >
           <img
@@ -81,7 +81,7 @@ export default function Home() {
         </div>
         <div className="content-wrapper">
             <div className="content-gallery">
-              <h2 className="gallery-button" onClick={handleGalleryClick}>Wedding Gallery</h2>
+              <div className="gallery-button" onClick={handleGalleryClick}>Wedding Gallery</div>
               <div className="donation-button-container">
                 <button onClick={toggleLanguage}>
                   <span className={isEnglish ? "uk-flag active" : "uk-flag"}>🇬🇧</span>
