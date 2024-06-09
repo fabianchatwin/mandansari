@@ -89,7 +89,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-          <h2>
+          <h2 className="content-intro">
           {isEnglish ? (
             <>
               The fafalala Support Network is the crowdfunding project started at Fabian and Lia's wedding.

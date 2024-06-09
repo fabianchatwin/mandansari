@@ -97,6 +97,11 @@ hr {
   margin: 0 auto;
 }
 
+.content-intro{
+  margin-top:0px;
+  padding-top: 10px;
+}
+
 button {
   cursor: pointer;
 }
