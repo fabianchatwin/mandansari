@@ -30,9 +30,12 @@ exports.handler = async function (event, context) {
     const { resources } = await searchQuery.execute();
 
     const images = resources.map((resource) => resource.secure_url);
+
+    const waterMarkedImages = images.map(imageUrl => imageUrl.replace("image/upload/", "image/upload/t_alicedonaggio/"));
+    
     return {
       statusCode: 200,
-      body: JSON.stringify(images),
+      body: JSON.stringify(waterMarkedImages),
     };
   } catch (error) {
     return {
