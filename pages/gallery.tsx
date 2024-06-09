@@ -36,7 +36,7 @@ export default function Intro() {
       customLabels: [
         "Restaurant",
         "Buffet",
-        "Black and Whie",
+        "Black and White",
         "Flowers",
         "Cake",
         "Bubbles",
