@@ -31,7 +31,7 @@ exports.handler = async function (event, context) {
 
     const images = resources.map((resource) => resource.secure_url);
 
-    const waterMarkedImages = images.map(imageUrl => imageUrl.replace("image/upload/", "image/upload/t_alicedonaggio/"));
+    const waterMarkedImages = images.map(imageUrl => imageUrl.replace("image/upload/", "image/upload/t_wedding/"));
     
     return {
       statusCode: 200,
