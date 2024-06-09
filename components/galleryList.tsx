@@ -10,8 +10,8 @@ export default function GalleryList({ folder, onBack }) {
     async function fetchItems() {
       if (folder === "ALLVIDEOS") {
         setItems([
-          "https://fafalala.org/Venice.mov",
-          "https://fafalala.org/LIAFABIAN2024-10000.mp4",
+          "https://media.fafalala.org/Venice.mov",
+          "https://media.fafalala.org/LIAFABIAN2024-10000.mp4",
         ]);
       } else {
         const response = await fetch(`/api/cloudinary?folder=${folder}`);

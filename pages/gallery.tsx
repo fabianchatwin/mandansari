@@ -91,7 +91,7 @@ export default function Intro() {
         <button className="gallery-open-button  video-container">
           {/*<VideoPlayer videoId="PCPPEn2EGh4" /> // youtube video */}
           <video
-            src="https://fafalala.org/LIAFABIAN2024-10000.mp4"
+            src="https://media.fafalala.org/LIAFABIAN2024-10000.mp4"
             controls
             autoPlay
             muted
