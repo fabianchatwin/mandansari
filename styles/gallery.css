@@ -123,7 +123,6 @@ animation: zoomPan 10s ease-in-out infinite;
   right: 10px;
 }
 
-
 .gallery-fullscreen-button {
   bottom: 10px;
   right: 10px;
@@ -270,7 +269,7 @@ animation: zoomPan 10s ease-in-out infinite;
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(600px, 1fr)
+    minmax(400px, 1fr)
   );
   gap: 10px;
   justify-items: center;
