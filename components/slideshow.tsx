@@ -135,7 +135,6 @@ export default function SlideShow({ folder, startIndex = 0, onBack }) {
           >
             {isCover ? "COVER" : "CONTAIN"}
           </button>
-
         </>
       )}
     </div>

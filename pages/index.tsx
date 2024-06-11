@@ -5,9 +5,9 @@ import DonationUpdate1 from "@components/DonationUpdate1";
 const images = [
   "lot_people-15.jpg",
   "group_1-15.jpg",
+  "group_dinner1.jpg",
   "group_2-15.jpg",
-  "group_3-15.jpg",
-  "group_4-15.jpg",
+  "group_4-15.jpg"
 ];
 
 export default function Home() {

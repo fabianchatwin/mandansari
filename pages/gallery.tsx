@@ -90,6 +90,8 @@ export default function Intro() {
       {!showSubfolders && (
         <button className="gallery-open-button  video-container">
           {/*<VideoPlayer videoId="PCPPEn2EGh4" /> // youtube video */}
+          <div className="gallery-button-left"></div>
+          <div className="gallery-button-right"> </div>
           <video
             src="https://media.fafalala.org/LIAFABIAN2024-10000.mp4"
             controls
