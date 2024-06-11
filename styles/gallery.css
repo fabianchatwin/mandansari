@@ -276,9 +276,9 @@ animation: zoomPan 10s ease-in-out infinite;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   .gallery-all-photo-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Adjust min width for smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust min width for smaller screens */
   }
 }
 
