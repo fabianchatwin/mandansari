@@ -257,7 +257,7 @@ animation: zoomPan 10s ease-in-out infinite;
 .gallery-all-container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .gallery-all-video-wrapper {
@@ -275,12 +275,31 @@ animation: zoomPan 10s ease-in-out infinite;
   justify-items: center;
 }
 
+
+@media (max-width: 768px) {
+  .gallery-all-photo-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Adjust min width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-all-photo-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Make sure images fit 100% width on very small screens */
+  }
+
+  .gallery-all-container {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  
+}
+
 .gallery-all-image {
   width: 100%;
+  height: auto;
   cursor: pointer;
   transition: transform 0.2s ease;
   border-radius: 5px;
-
 }
 
 .gallery-all-video {
