@@ -23,37 +23,33 @@ export default function Intro() {
   };
 
   const folderMap = {
-    Alice: {
-      subfolders: [
-        "RESTAURANT",
-        "BUFFET",
-        "BN",
-        "FLOWERS",
-        "CAKE",
-        "BUBBLES",
-        "MIX",
-      ],
-      customLabels: [
-        "Restaurant",
-        "Buffet",
-        "Black and White",
-        "Flowers",
-        "Cake",
-        "Bubbles",
-        "Mix",
-      ],
-    },
-    ALLVIDEOS: {
+    GRANGUARDIA: {
       subfolders: [],
       customLabels: [],
     },
-    WhatsappPhotos: {
-      subfolders: ["WHATSAPPPHOTOSATURDAY", "WHATSAPPPHOTOSSUNDAY"],
-      customLabels: ["Whatsapp Photos Saturday", "Whatsapp Photos Sunday"],
+    RESTAURANT: {
+      subfolders: [
+        "BUFFETPARTY",
+        "DINNER",
+        "GROUPS",
+        "KIDS",
+        "LIAFABIAN",
+      ],
+      customLabels: [
+        "Buffet",
+        "Dinner",
+        "Groups",
+        "Kids",
+        "Lia & Fabian",
+      ],
     },
-    WHATSAPPVIDEOS: {
-      subfolders: ["WHATSAPPVIDEOSATURDAY", "WHATSAPPVIDEOSUNDAY"],
-      customLabels: ["Whatsapp Videos Saturday", "Whatsapp Videos Sunday"],
+    OFFICIALVIDEOS: {
+      subfolders: [],
+      customLabels: [],
+    },
+    WHATSAPP: {
+      subfolders: ["WHATSAPPPHOTOSATURDAY","WHATSAPPVIDEOSATURDAY", "SUNDAY","WHATSAPPVIDEOSUNDAY"],
+      customLabels: ["Saturday Photos", "Saturday Videos", "Sunday Photos", "Sunday Videos"],
     },
   };
 
@@ -69,15 +65,15 @@ export default function Intro() {
 
   const renderFolders = showSubfolders
     ? folderMap[selectedFolder || ""]?.subfolders
-    : ["Alice", "ALLVIDEOS", "WhatsappPhotos", "WHATSAPPVIDEOS"];
+    : ["GRANGUARDIA", "RESTAURANT", "OFFICIALVIDEOS", "WHATSAPP"];
     
   const buttonLabels = showSubfolders
     ? folderMap[selectedFolder || ""]?.customLabels
     : [
-        "Official Photos",
+        "Gran Guardia",
+        "Restaurant",
         "Official Videos",
-        "Contributed Photos",
-        "Contributed Videos",
+        "Contributions",
       ];
 
   if (selectedFolder && !showSubfolders) {

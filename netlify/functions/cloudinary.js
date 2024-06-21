@@ -29,13 +29,25 @@ exports.handler = async function (event, context) {
 
     const { resources } = await searchQuery.execute();
 
-    const images = resources.map((resource) => resource.secure_url);
+    const watermarkFolders = ["BUFFETPARTY", "DINNER", "KIDS", "GROUPS","LIAFABIAN"];
+    const shouldApplyWatermark = watermarkFolders.includes(folder);
 
-    const waterMarkedImages = images.map(imageUrl => imageUrl.replace("image/upload/", "image/upload/t_wedding/"));
+    const images = resources.map((resource) => {
+      const url = resource.secure_url;
+      const publicId = resource.public_id;
+
+      // Apply watermark if in the specified folders and filename does not contain "noalice"
+      if (shouldApplyWatermark && !publicId.includes("noalice")) {
+        return url.replace("image/upload/", "image/upload/t_wedding/");
+      }
+
+      // Return original URL if conditions are not met
+      return url;
+    });
     
     return {
       statusCode: 200,
-      body: JSON.stringify(waterMarkedImages),
+      body: JSON.stringify(images),
     };
   } catch (error) {
     return {

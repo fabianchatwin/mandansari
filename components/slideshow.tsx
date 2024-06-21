@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 
-export default function SlideShow({ folder, startIndex = 0, onBack }) {
+export default function SlideShow({ folder, startIndex = 0, onBack, paused = false}) {
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(startIndex);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(paused);
   const [isCover, setIsCover] = useState(false);
   const [secondsRemaining, setSecondsRemaining] = useState(5);
   const touchStartX = useRef(null);
