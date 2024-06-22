@@ -92,7 +92,7 @@ animation: zoomPan 10s ease-in-out infinite;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  border: none;
+  border: 1px solid grey;
   cursor: pointer;
   border-radius: 5px;
   padding: 5px 10px;
@@ -104,7 +104,6 @@ animation: zoomPan 10s ease-in-out infinite;
   top: 50%;
   transform: translateY(-50%);
   padding: 10px;
-  cursor: pointer;
   font-size: x-large;
   font-weight: bold;
   height: 200px;
@@ -121,6 +120,37 @@ animation: zoomPan 10s ease-in-out infinite;
 .gallery-counter-button {
   top: 10px;
   right: 10px;
+  border: 1px transparent !important;
+  cursor: default !important;
+}
+
+.gallery-download-button {
+  top: 40px;
+  right: 10px;
+}
+
+.gallery-instagram-button {
+  bottom: 10px;
+  right: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none !important;
+  background-size: cover;
+  filter: grayscale(100%);
+  width: 85px; 
+  height: 17px;
+}
+
+.instagram-alice {
+  background-image: url("https://media.fafalala.org/alicedonaggio10.png");
+}
+
+.instagram-picsim {
+  background-image: url("https://media.fafalala.org/simpic3.png");
+}
+
+.gallery-download-button i, .gallery-instagram-button i {
+  font-size: 1.5rem;
 }
 
 .gallery-fullscreen-button {

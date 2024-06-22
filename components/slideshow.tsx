@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function SlideShow({ folder, startIndex = 0, onBack, paused = false}) {
+export default function SlideShow({ folder, startIndex = 0, onBack, paused = false }) {
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(startIndex);
   const [isPaused, setIsPaused] = useState(paused);
   const [isCover, setIsCover] = useState(false);
-  const [secondsRemaining, setSecondsRemaining] = useState(5);
+  const [intervalDuration, setIntervalDuration] = useState(5);
+  const [secondsRemaining, setSecondsRemaining] = useState(intervalDuration);
   const touchStartX = useRef(null);
 
   useEffect(() => {
@@ -16,36 +18,39 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
     }
 
     fetchImages(folder);
+  }, [folder]);
 
+  useEffect(() => {
     const interval = setInterval(() => {
       if (!isPaused) {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setSecondsRemaining(5);
+        setSecondsRemaining(intervalDuration);
       }
-    }, 5000);
+    }, intervalDuration * 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [images.length, isPaused]);
+    return () => clearInterval(interval);
+  }, [images.length, isPaused, intervalDuration]);
 
   useEffect(() => {
+    if (isPaused || secondsRemaining <= 0) return;
+
     const countdown = setInterval(() => {
-      if (!isPaused && secondsRemaining > 0) {
-        setSecondsRemaining((prevSeconds) => prevSeconds - 1);
-      }
+      setSecondsRemaining((prevSeconds) => prevSeconds - 1);
     }, 1000);
+
     return () => clearInterval(countdown);
   }, [isPaused, secondsRemaining]);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setSecondsRemaining(intervalDuration);
   };
 
   const prevImage = () => {
     setCurrentImageIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     );
+    setSecondsRemaining(intervalDuration);
   };
 
   const togglePause = () => {
@@ -72,18 +77,53 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
 
   const handleFullscreen = () => {
     const elem = document.documentElement;
-    if (
-      !document.fullscreenElement
-      ) {
+    if (!document.fullscreenElement) {
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
-      } 
+      }
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
-      } 
+      }
     }
   };
+
+  const toggleTimer = () => {
+    setIntervalDuration((prevDuration) => {
+      const newDuration = prevDuration === 5 ? 10 : 5;
+      setSecondsRemaining(newDuration); // Ensure the countdown is in sync
+      return newDuration;
+    });
+  };
+  
+
+  const downloadImage = () => {
+    const link = document.createElement("a");
+    link.href = images[currentImageIndex];
+    link.download = `image-${currentImageIndex + 1}.jpg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const getAuthorDetails = (image) => {
+    const folderNamesAlice = ["BUFFETPARTY", "DINNER", "GROUPS", "KIDS", "LIFABIAN"];
+    const folderNamesPicSim = ["GRANGUARDIA"];
+    const fileName = image.split("/").pop();
+    const doesNotContainAliceKeywords = !fileName.includes("contributed") && !fileName.includes("noalice");
+    const doesNotContainPicSimKeywords = !fileName.includes("contributed") && !fileName.includes("nopiccirilli");
+
+    if (folderNamesAlice.includes(folder) && doesNotContainAliceKeywords) {
+      return { link: "https://www.instagram.com/alicedonaggio", className: "instagram-alice" };
+    }
+    if (folderNamesPicSim.includes(folder) && doesNotContainPicSimKeywords) {
+      return { link: "https://www.instagram.com/pic.sim", className: "instagram-picsim" };
+    }
+    return null;
+  };
+
+  const authorDetails = images.length > 0 ? getAuthorDetails(images[currentImageIndex]) : null;
+
 
   return (
     <div className="gallery-container">
@@ -105,11 +145,12 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
                 key={index}
                 src={image}
                 alt={`Image ${index + 1}`}
-                className={ `gallery-front-image 
+                className={`
+                  gallery-front-image 
                   ${index === currentImageIndex ? "active" : "inactive"} 
                   ${index === currentImageIndex && !isPaused ? "animating" : ""}
                   ${isCover ? "gallery-cover" : "gallery-contain"}
-                  `}
+                `}
               />
             ))}
           </div>
@@ -122,7 +163,9 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
           <button className="gallery-pause-button" onClick={togglePause}>
             {isPaused ? "PLAY" : "PAUSE"}
           </button>
-          <button className="gallery-timer-button">{secondsRemaining}</button>
+          <button className="gallery-timer-button" onClick={toggleTimer}>
+            {secondsRemaining}
+          </button>
           <button
             className="gallery-fullscreen-button"
             onClick={handleFullscreen}
@@ -135,6 +178,18 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
           >
             {isCover ? "COVER" : "CONTAIN"}
           </button>
+          <button
+            className="gallery-download-button"
+            onClick={downloadImage}
+          >
+            <FontAwesomeIcon icon="download" />
+          </button>
+          {authorDetails && (
+            <button className={`gallery-instagram-button ${authorDetails.className}`}
+            onClick={() => window.open(authorDetails.link, '_blank')}
+            >
+            </button>
+          )}          
         </>
       )}
     </div>

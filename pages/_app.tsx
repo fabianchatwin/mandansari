@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/fafalala.css";
 import "../styles/gallery.css";
+import './fontawesome';
 
 function Application({ Component, pageProps }: AppProps) {
   return (
