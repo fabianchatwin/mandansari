@@ -6,7 +6,7 @@ import "../styles/gallery.css";
 import './fontawesome';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { initGA, logPageView } from '../utils/ga';
+import { initGA, logPageView } from './ga';
 
 function Application({ Component, pageProps }: AppProps) {
   const router = useRouter();
