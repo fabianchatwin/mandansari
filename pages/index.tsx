@@ -40,7 +40,7 @@ export default function Home() {
       const column2 = document.querySelector(".column-2");
       if (column2 && brevoFormRef.current) {
         const formWidth = column2.clientWidth;
-        let formHeight = 330; 
+        let formHeight = 330;
         if (formWidth < 560) formHeight = 360;
         if (formWidth < 530) formHeight = 380;
         if (formWidth < 520) formHeight = 400;
@@ -69,7 +69,7 @@ export default function Home() {
 
 
   return (
-    <>  
+    <>
       <div className="container">
         <div className="photo-wrapper" onClick={handleGalleryClick} >
           <img
@@ -80,56 +80,56 @@ export default function Home() {
           />
         </div>
         <div className="content-wrapper">
-            <div className="content-gallery">
-              <div className="gallery-button" onClick={handleGalleryClick}>Wedding Gallery</div>
-              <div className="donation-button-container">
-                <button onClick={toggleLanguage}>
-                  <span className={isEnglish ? "uk-flag active" : "uk-flag"}>🇬🇧</span>
-                  <span className={isEnglish ? "ita-flag" : "ita-flag active"}>🇮🇹</span>
-                </button>
-              </div>
+          <div className="content-gallery">
+            <div className="gallery-button" onClick={handleGalleryClick}>Wedding Gallery</div>
+            <div className="donation-button-container">
+              <button onClick={toggleLanguage}>
+                <span className={isEnglish ? "uk-flag active" : "uk-flag"}>🇬🇧</span>
+                <span className={isEnglish ? "ita-flag" : "ita-flag active"}>🇮🇹</span>
+              </button>
             </div>
+          </div>
           <h2 className="content-intro">
-          {isEnglish ? (
-            <>
-              The fafalala Support Network is the crowdfunding project started at Fabian and Lia's wedding.
-              <p></p>
-              <div className="ita">
-                Our mission is to empower less fortunate individuals with opportunities for growth and advancement.
-              </div>
-            </>
-          ) : (
-            <>
-              La rete di supporto fafalala è il progetto di crowdfunding avviato al matrimonio di Fabian e Lia.
-              <p></p>
-              <div className="ita">
-              La nostra missione è quella di dare potere alle persone meno fortunate, offrendo loro opportunità di crescita e progresso.
-              </div>
-            </>
-          )}
+            {isEnglish ? (
+              <>
+                The fafalala Support Network is the crowdfunding project started at Fabian and Lia's wedding.
+                <p></p>
+                <div className="ita">
+                  Our mission is to empower less fortunate individuals with opportunities for growth and advancement.
+                </div>
+              </>
+            ) : (
+              <>
+                La rete di supporto fafalala è il progetto di crowdfunding avviato al matrimonio di Fabian e Lia.
+                <p></p>
+                <div className="ita">
+                  La nostra missione è quella di dare potere alle persone meno fortunate, offrendo loro opportunità di crescita e progresso.
+                </div>
+              </>
+            )}
           </h2>
-      <p></p>
+          <p></p>
           <div className="content-subscribe">
             <div className="column-1">
               <h2>
-              {isEnglish ? (
-                <>
-                Collected: 9,205 euro
-                <br></br>
-                <button onClick={goFundme}>SUPPORT US</button>
-                <p></p>
-                 Join the mailing list to follow what we do with this money!
-              </>
+                {isEnglish ? (
+                  <>
+                    Collected: 9,205 euro
+                    <br></br>
+                    <button onClick={goFundme}>SUPPORT US</button>
+                    <p></p>
+                    Join the mailing list to follow what we do with this money!
+                  </>
                 ) : (
                   <>
-                Raccolti: 9,205 euro
-                <br></br>
-                <button onClick={goFundme}>SOSTIENICI</button>
-                <p></p>
-                Iscriviti alla newsletter per seguire come utilizziamo questi fondi!
+                    Raccolti: 9,205 euro
+                    <br></br>
+                    <button onClick={goFundme}>SOSTIENICI</button>
+                    <p></p>
+                    Iscriviti alla newsletter per seguire come utilizziamo questi fondi!
                   </>
                 )}
-            </h2>
+              </h2>
 
             </div>
             <div className="column-2">
@@ -149,36 +149,33 @@ export default function Home() {
             </div>
           </div>
           <div className="textLeft content-blog">
-
-          {isEnglish ? (
-                <>
-          <h2>Thank you all for your donations!</h2>
-<p>
-  Thank you for participating in our wedding weekend! It was wonderful to see everyone together, reconnecting with old friends, and building new connections.
-</p>
-<p>
-  Your contributions have been abundant and generous. Lia and Fabian now have the responsibility to manage your donations. We will keep you updated on how we plan to use the money we have received. Join our mailing list to follow the story!
-</p>
+            {isEnglish ? (
+              <>
+                <h2>Thank you all for your donations!</h2>
+                <p>
+                  Thank you for participating in our wedding weekend! It was wonderful to see everyone together, reconnecting with old friends, and building new connections.
+                </p>
+                <p>
+                  Your contributions have been abundant and generous. Lia and Fabian now have the responsibility to manage your donations. We will keep you updated on how we plan to use the money we have received. Join our mailing list to follow the story!
+                </p>
               </>
-                ) : (
-                  <>
-<h2>Grazie a tutti per le vostre donazioni!</h2>
-<p>
-  Grazie per aver partecipato al nostro weekend di nozze! È stato meraviglioso vedere tutti insieme, riconnettersi con vecchi amici e costruire nuove connessioni.
-</p>
-<p>
-  Le vostre donazioni sono state generose e abbondanti. Lia e Fabian hanno ora la responsabilità di gestire le vostre donazioni. Vi terremo aggiornati su come pianifichiamo di utilizzare i soldi ricevuti. Iscrivetevi alla nostra mailing list per seguire la storia!
-</p>
-
-                  </>
-                )}
-
-            <DonationUpdate1 isEnglish={isEnglish}/>
+            ) : (
+              <>
+                <h2>Grazie a tutti per le vostre donazioni!</h2>
+                <p>
+                  Grazie per aver partecipato al nostro weekend di nozze! È stato meraviglioso vedere tutti insieme, riconnettersi con vecchi amici e costruire nuove connessioni.
+                </p>
+                <p>
+                  Le vostre donazioni sono state generose e abbondanti. Lia e Fabian hanno ora la responsabilità di gestire le vostre donazioni. Vi terremo aggiornati su come pianifichiamo di utilizzare i soldi ricevuti. Iscrivetevi alla nostra mailing list per seguire la storia!
+                </p>
+              </>
+            )}
+            <DonationUpdate1 isEnglish={isEnglish} />
           </div>
         </div>
-          <div className="footer-spacer">&nbsp;</div>
-          <div className="footer">
-          Fafalala is not an official organization (yet) but just a group of friends that want to do something good. 
+        <div className="footer-spacer">&nbsp;</div>
+        <div className="footer">
+          Fafalala is not an official organization (yet) but just a group of friends that want to do something good.
           <br></br>
           Reach us on gmail at fabianchatwin or liamandansari22.
         </div>

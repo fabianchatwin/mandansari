@@ -21,33 +21,43 @@ exports.handler = async function (event, context) {
 
     let searchQuery = cloudinary.search
       .expression(`folder:${folder}`)
-      .sort_by("public_id", "desc");
-
+      .sort_by("public_id", "asc");
+/*      
+      .with_field("context")
+      .with_field("metadata")
+      .with_field("image_metadata");            
+*/
     if (limit && !isNaN(parseInt(limit))) {
       searchQuery = searchQuery.max_results(parseInt(limit));
     }
 
     const { resources } = await searchQuery.execute();
 
+/*
+    const images = resources.map((resource) => ({
+      url: resource.secure_url,
+      taken_at: resource.context && resource.context.custom && resource.context.custom.taken_at
+        ? new Date(resource.context.custom.taken_at).getTime()
+        : resource.image_metadata && resource.image_metadata.DateTimeOriginal
+        ? new Date(resource.image_metadata.DateTimeOriginal).getTime()
+        : new Date(resource.created_at).getTime()
+    }));
+
+    images.sort((a, b) => a.taken_at - b.taken_at);
+    */
     const watermarkFolders = ["BUFFETPARTY", "DINNER", "KIDS", "GROUPS","LIAFABIAN"];
     const shouldApplyWatermark = watermarkFolders.includes(folder);
 
-    const images = resources.map((resource) => {
-      const url = resource.secure_url;
-      const publicId = resource.public_id;
-
-      // Apply watermark if in the specified folders and filename does not contain "noalice"
-      if (shouldApplyWatermark && !publicId.includes("noalice")) {
-        return url.replace("image/upload/", "image/upload/t_wedding/");
+    const waterMarkedImages = resources.map((image) => {
+      if (shouldApplyWatermark && !image.url.includes("noalice")) {
+        return image.url.replace("image/upload/", "image/upload/t_wedding/");
       }
-
-      // Return original URL if conditions are not met
-      return url;
+      return image.url;
     });
     
     return {
       statusCode: 200,
-      body: JSON.stringify(images),
+      body: JSON.stringify(waterMarkedImages),
     };
   } catch (error) {
     return {
