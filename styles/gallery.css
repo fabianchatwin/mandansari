@@ -103,18 +103,22 @@ animation: zoomPan 10s ease-in-out infinite;
 .gallery-next-button {
   top: 50%;
   transform: translateY(-50%);
+  background-color: transparent !important;
   padding: 10px;
   font-size: x-large;
   font-weight: bold;
-  height: 100px;
-  border: 1px transparent !important;
+  height: 100%;
+  width: 30%;
+  border: none !important;
 }
 
 .gallery-prev-button {
+  text-align: left;
   left: 0px;
 }
 
 .gallery-next-button {
+  text-align: right;
   right: 0px;
 }
 

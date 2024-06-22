@@ -10,13 +10,14 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
       <div id="eng" className={`content-donation ${isEnglish ? 'active' : ''}`}>
       <h3>Update 2 June 2024
       </h3>
-      <h3>1. This is the beginning of lalafafa!</h3>
+      <h3>1. This is the beginning of fafalala!</h3>
         <p>
-          If you are reading this, you probably understand our vision. We dream of using our wedding as an opportunity to make a positive impact on those less fortunate. Starting with two individuals: Maya and Nur.
+          We dream of using our wedding as an opportunity to make a positive impact on those less fortunate. Starting with two individuals: Maya and Nur.
         </p>
         <p>
           Easy to say, but difficult to do, right? We don't know where this journey will take us or how much we can accomplish, but we are committed to trying. You are our contributor, and we hope you can follow our story. We want to keep you updated on every step of this adventure!
         </p>
+        <h3>2. Share your photos!</h3>
         <p>
           This website serves dual purposes. It is both the wedding photo and video gallery for our memories and the platform to share our donation journey. If you have more photos or videos from the event that you want to add to the gallery, please send them to us!
         </p>
@@ -26,14 +27,14 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         <p>
           We took the liberty of automatically adding you to our mailing list as our core group of supporters. We hope this is okay with you, and that you won't unsubscribe! We promise not to send many emails. We will also start a <a href="https://www.medium.com">Medium channel</a> with the same content, which will be the only social media we use for now.
         </p>
-        <h3>2. Donation Calculations</h3>
+        <h3>3. Donation Calculations</h3>
         <p>
           We received €8,315 from GoFundMe. GoFundMe charges a 2.9% fee for private funding. That’s a significant amount to pay for the convenience of the platform! Next time, we might consider an alternative or a personal website.
         </p>
         <p>
           We also received €890 in alternative donations from people who didn’t want to use the platform, in the form of cash, bank, and crypto transfers.
         </p>
-        <h3>3. Doing it right: Save and Wait</h3>
+        <h3>4. Doing it right: Save and Wait</h3>
         <p>
           We realize this is just the beginning of an adventure! It’s difficult to imagine simply transferring the money to Maya and Nur and hoping for the best. They have never seen such a large amount of money all at once, and we are concerned about their reactions. They might waste the money, not believe it's real, suspect a trick, or expect something in return.
         </p>
@@ -43,7 +44,7 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         <p>
           For now, we have decided to put the money in a dedicated savings account, which will also earn some interest to protect against inflation.
         </p>
-        <h3>4. What's Next?</h3>
+        <h3>5. What's Next?</h3>
         <p>
           This year, 2024, will be a transition year. We will probably need to travel back and forth between Italy and Indonesia a few times to handle paperwork, settle in (we are looking into building a house in the village in Java), take care of family, and adjust our jobs.
         </p>        
@@ -61,9 +62,9 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
       </div>
       <div id="ita" className={`content-donation ${isEnglish ? '' : 'active'}`}>
       <h3>Aggiornamento 2 Giugno 2024</h3>
-      <h3>1. Questo è l'inizio di lalafafa!</h3>
+      <h3>1. Questo è l'inizio di fafalala!</h3>
         <p>
-          Se stai leggendo questo, probabilmente capisci la nostra visione. Sogniamo di usare il nostro matrimonio come un'opportunità per avere un impatto positivo su coloro che sono meno fortunati. Iniziando con due persone: Maya e Nur.
+          Sogniamo di usare il nostro matrimonio come un'opportunità per avere un impatto positivo su coloro che sono meno fortunati. Iniziando con due persone: Maya e Nur.
         </p>
         <p>
           Facile a dirsi, ma difficile da fare, giusto? Non sappiamo dove ci porterà questo viaggio o quanto possiamo realizzare, ma siamo impegnati a provarci. Sei il nostro contributore, e speriamo che tu possa seguire la nostra storia. Vogliamo tenerti aggiornato su ogni passo di questa avventura!
