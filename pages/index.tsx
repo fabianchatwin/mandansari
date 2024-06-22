@@ -82,14 +82,14 @@ export default function Home() {
         <div className="content-wrapper">
           <div className="content-gallery">
             <div className="gallery-button" onClick={handleGalleryClick}>Wedding Gallery</div>
-            <div className="donation-button-container">
+          </div>
+          <h2 className="content-intro">
+          <div className="donation-button-container">
               <button onClick={toggleLanguage}>
                 <span className={isEnglish ? "uk-flag active" : "uk-flag"}>🇬🇧</span>
                 <span className={isEnglish ? "ita-flag" : "ita-flag active"}>🇮🇹</span>
               </button>
             </div>
-          </div>
-          <h2 className="content-intro">
             {isEnglish ? (
               <>
                 The fafalala Support Network is the crowdfunding project started at Fabian and Lia's wedding.
