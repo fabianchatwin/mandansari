@@ -3,10 +3,10 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/fafalala.css";
 import "../styles/gallery.css";
-import './fontawesome';
+import '../utils/fontawesome';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { initGA, logPageView } from './ga';
+import { initGA, logPageView } from '../utils/ga';
 
 function Application({ Component, pageProps }: AppProps) {
   const router = useRouter();
