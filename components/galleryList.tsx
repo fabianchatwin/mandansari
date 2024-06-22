@@ -49,8 +49,10 @@ export default function GalleryList({ folder, onBack }) {
     GROUPS: 'https://photos.app.goo.gl/LMDcnmXrawtQRA316',
     KIDS: 'https://photos.app.goo.gl/MbMMxvmYQmU714jX6',
     FABIANLIA: 'https://photos.app.goo.gl/m3pEYzVx4767RakJ7',
-    GRANGUARDIA: 'https://photos.app.goo.gl/gWxZZc8GNcBZhMzv5'
-
+    GRANGUARDIA: 'https://photos.app.goo.gl/gWxZZc8GNcBZhMzv5',
+    WHATSAPPPHOTOSATURDAY: 'https://photos.app.goo.gl/7g3zafrvA9AV2X5L6',
+    WHATSAPPVIDEOSATURDAY: 'https://photos.app.goo.gl/9bTYAL8jJ99CatQY7',
+    WHATSAPPVIDEOSUNDAY: 'https://photos.app.goo.gl/KpVnNnhAn69CK3gCA'
   };
 
   const googlePhotosLink = googlePhotosLinks[folder] || '#';
