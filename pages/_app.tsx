@@ -23,7 +23,10 @@ function Application({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Add other meta tags, title, or links here */}
+        <meta property="og:image" content="https://media.fafalala.org/lot_people-15-small.jpg" />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="683" />
+        <meta property="og:image:alt" content="Welcome to fafalala.org" />        
       </Head>
       <Component {...pageProps} />
     </>
