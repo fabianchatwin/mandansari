@@ -124,6 +124,12 @@ button:not(
   color: var(--dark-color);
 }
 
+hr {
+  width: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .content-subscribe button {
   border: none;
   border-radius: 6px;
