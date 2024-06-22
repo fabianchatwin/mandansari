@@ -156,7 +156,7 @@ export default function Home() {
                   Thank you for participating in our wedding weekend! It was wonderful to see everyone together, reconnecting with old friends, and building new connections.
                 </p>
                 <p>
-                  Your contributions have been abundant and generous. Lia and Fabian now have the responsibility to manage your donations. We will keep you updated on how we plan to use the money we have received. Join our mailing list to follow the story!
+                  Your contributions have been generous! Lia and Fabian now have the responsibility to manage your donations. We will keep you updated on how we plan to use the money we have received. Join our mailing list to follow the story!
                 </p>
               </>
             ) : (
@@ -166,7 +166,7 @@ export default function Home() {
                   Grazie per aver partecipato al nostro weekend di nozze! È stato meraviglioso vedere tutti insieme, riconnettersi con vecchi amici e costruire nuove connessioni.
                 </p>
                 <p>
-                  Le vostre donazioni sono state generose e abbondanti. Lia e Fabian hanno ora la responsabilità di gestire le vostre donazioni. Vi terremo aggiornati su come pianifichiamo di utilizzare i soldi ricevuti. Iscrivetevi alla nostra mailing list per seguire la storia!
+                  Le vostre donazioni sono state generose! Lia e Fabian hanno ora la responsabilità di gestire le vostre donazioni. Vi terremo aggiornati su come pianifichiamo di utilizzare i soldi ricevuti. Iscrivetevi alla nostra mailing list per seguire la storia!
                 </p>
               </>
             )}
