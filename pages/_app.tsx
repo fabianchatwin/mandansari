@@ -22,10 +22,12 @@ function Application({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>Welcome to fafalala!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image" content="https://fafalala.org/ws-image-1.jpg" />
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="400" />
+        <meta name="description" content="The fafalala Support Network is the crowdfunding project started at Fabian and Lia's wedding." />
       </Head>
       <Component {...pageProps} />
     </>
