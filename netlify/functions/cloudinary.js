@@ -18,7 +18,7 @@ exports.handler = async function (event, context) {
         body: JSON.stringify({ error: "Folder parameter is required" }),
       };
     }
-
+    
     let searchQuery = cloudinary.search
       .expression(`folder:${folder}`)
       .sort_by("public_id", "asc");

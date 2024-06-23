@@ -15,7 +15,12 @@ export default function GalleryList({ folder, onBack }) {
           "https://media.fafalala.org/LIAFABIAN2024-10000.mp4",
         ]);
       } else {
-        const response = await fetch(`/api/cloudinary?folder=${folder}`);
+        let response;
+        if (folder === "BUFFETPARTY") {
+          response = await fetch("/api/list-images?bucketName=wedding-buffetparty");
+        } else {
+          response = await fetch(`/api/cloudinary?folder=${folder}`);
+        }
         const data = await response.json();
         setItems(data);
       }
