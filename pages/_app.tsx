@@ -37,6 +37,7 @@ function Application({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
         <title>Welcome to fafalala Support Network!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image" content="https://fafalala.org/ws-image-1.jpg" />

@@ -1,7 +1,6 @@
 export const GA_TRACKING_ID = 'G-2W6RTZ05CJ';
 
 export const initGA = () => {
-
     if (typeof window !== 'undefined') {
         window.dataLayer = window.dataLayer || [];
     
