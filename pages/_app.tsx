@@ -1,21 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { useRouter } from 'next/router';
+import { initGA, GA_TRACKING_ID } from '../utils/gtag';
+
 import "../styles/fafalala.css";
 import "../styles/gallery.css";
 import '../utils/fontawesome';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { initGA, logPageView } from '../utils/ga';
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
 
 function Application({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
   useEffect(() => {
     initGA();
-    logPageView();
-    router.events.on('routeChangeComplete', logPageView);
+
+    const handleRouteChange = (url: string) => {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', GA_TRACKING_ID, {
+          page_path: url,
+        });
+      }
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', logPageView);
+      router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
 
