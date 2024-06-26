@@ -16,7 +16,6 @@ module.exports.handler = async (event, context) => {
   const bucketBaseUrl = `https://${bucketName}.fafalala.org`;
   const apiUrl = `https://api.cloudflare.com/client/v4/accounts/${accountId}/r2/buckets/${bucketName}/objects`;
 
-
   let imageUrls = [];
   try {
 

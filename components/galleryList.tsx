@@ -97,6 +97,12 @@ export default function GalleryList({ folder, onBack }) {
           {isVideoFolder ? (
             items.map((video, index) => (
               <div className="gallery-all-video-wrapper" key={index}>
+                {folder === "OFFICIALVIDEOS" && (
+                    <div className="gallery-video-title">
+                    {index === 0 && "PreWedding Venice"}
+                    {index === 1 && "Official Video"}
+                    </div>
+                )}
                 <video src={video} controls className="gallery-all-video" />
                 <p></p>
               </div>

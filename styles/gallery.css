@@ -298,9 +298,19 @@ animation: zoomPan 10s ease-in-out infinite;
   padding: 10px;
 }
 
+.gallery-video-title {
+  font-family: "Pacifico", sans-serif;
+  font-size: 2rem;
+  color: var(--dark-color);
+  margin: auto;
+}
+
 .gallery-all-video-wrapper {
   display: flex;
   justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
 .gallery-all-photo-wrapper {
@@ -341,11 +351,10 @@ animation: zoomPan 10s ease-in-out infinite;
 }
 
 .gallery-all-video {
-  max-width: 100%;
+  max-width: 1000px;
   width: auto;
   margin: 10px auto;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  border-radius: 10px;
 }
 
 .gallery-all-image:hover {

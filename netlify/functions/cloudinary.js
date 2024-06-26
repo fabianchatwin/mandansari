@@ -45,6 +45,7 @@ exports.handler = async function (event, context) {
 
     images.sort((a, b) => a.taken_at - b.taken_at);
     */
+   /*
     const watermarkFolders = ["BUFFETPARTY", "DINNER", "KIDS", "GROUPS","LIAFABIAN"];
     const shouldApplyWatermark = watermarkFolders.includes(folder);
 
@@ -54,10 +55,14 @@ exports.handler = async function (event, context) {
       }
       return image.url;
     });
-    
+    */
+    const images = resources.map((image) => {
+      return image.url;
+    });
+
     return {
       statusCode: 200,
-      body: JSON.stringify(waterMarkedImages),
+      body: JSON.stringify(images),
     };
   } catch (error) {
     return {
