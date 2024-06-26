@@ -12,7 +12,12 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
 
   useEffect(() => {
     async function fetchImages(folder) {
-      const response = await fetch(`/api/cloudinary?folder=${folder}`);
+      let response;
+      if (folder === "BUFFETPARTY") {
+        response = await fetch("/api/list-images?bucketName=wedding-buffetparty");
+      } else {
+        response = await fetch(`/api/cloudinary?folder=${folder}`);
+      }
       const data = await response.json();
       setImages(data);
     }
@@ -40,6 +45,26 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
 
     return () => clearInterval(countdown);
   }, [isPaused, secondsRemaining]);
+
+  /*
+  //doesn't work
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowRight') {
+        nextImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevImage();
+      }
+    };
+  
+    window.addEventListener('keydown', handleKeyDown);
+  
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentImageIndex]);  
+*/
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -107,6 +132,9 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
   };
 
   const getAuthorDetails = (image) => {
+    if (!image) {
+      return null;
+    }
     const folderNamesAlice = ["BUFFETPARTY", "DINNER", "GROUPS", "KIDS", "LIFABIAN"];
     const folderNamesPicSim = ["GRANGUARDIA"];
     const fileName = image.split("/").pop();
@@ -123,7 +151,6 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
   };
 
   const authorDetails = images.length > 0 ? getAuthorDetails(images[currentImageIndex]) : null;
-
 
   return (
     <div className="gallery-container">
