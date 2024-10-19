@@ -59,6 +59,11 @@ export default function Home() {
     router.push("/gallery");
   };
 
+  const handleNewClick = () => {
+    router.push("/new");
+  };
+
+
   const goFundme = () => {
     router.push("https://gofund.me/b734c85c");
   };
@@ -82,6 +87,7 @@ export default function Home() {
         <div className="content-wrapper">
           <div className="content-gallery">
             <div className="gallery-button" onClick={handleGalleryClick}>Wedding Gallery</div>
+            <div className="gallery-button gallery-button-new" onClick={handleNewClick}>✨New Photos✨</div>
           </div>
           <h2 className="content-intro">
           <div className="donation-button-container">

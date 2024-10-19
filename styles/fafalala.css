@@ -8,6 +8,11 @@
   --darker-color: black;
   --dark-color: #FF7D29; 
   --other-color: #FFEEA9;
+  --shine-dark-color: #007BFF; /* Primary blue color */
+  --shine-other-color: #A9D6FF; /* Lighter blue for button background */
+  --shine-color: #00CFFF; /* Bright blue for the shine effect */  
+  --animated-color-start: #0011ff; /* Start color for animation */
+  --animated-color-end: #ff0ab5; /* End color for animation */    
 }
 /*
 :root {
@@ -212,9 +217,42 @@ hr {
   height: 50px;
   display: flex;
   align-items: center;
+  cursor:pointer;
+  transition: transform 0.3s ease-in-out;
 }
 .gallery-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+
+.gallery-button-new {
+  color: white;
+  animation: shine 2s infinite;
+  animation: blue-shine 2s infinite, color-change 3s infinite alternate;
+  background-color: var(--shine-color);
+}
+
+
+/* Blue Shine Animation */
+@keyframes blue-shine {
+  0% {
+    box-shadow: 0 0 5px var(--shine-color), 0 0 10px var(--shine-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--shine-color), 0 0 30px var(--shine-color);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--shine-color), 0 0 10px var(--shine-color);
+  }
+}
+
+/* Color Change Animation */
+@keyframes color-change {
+  0% {
+    background-color: var(--animated-color-start);
+  }
+  100% {
+    background-color: var(--animated-color-end);
+  }
 }
 
 .content-subscribe {
