@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import DonationUpdate1 from "@components/DonationUpdate1";
+import DonationUpdate2 from "@components/DonationUpdate2";
 
 const images = [
   "lot_people-15.jpg",
@@ -120,7 +121,7 @@ export default function Home() {
               <h2>
                 {isEnglish ? (
                   <>
-                    Collected: 9,205 euro
+                    Collected: 9,374 euro
                     <br></br>
                     <button onClick={goFundme}>SUPPORT US</button>
                     <p></p>
@@ -176,6 +177,7 @@ export default function Home() {
                 </p>
               </>
             )}
+            <DonationUpdate2 isEnglish={isEnglish} />
             <DonationUpdate1 isEnglish={isEnglish} />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import GalleryList from "@components/galleryList";
+import DonationUpdate2 from "@components/DonationUpdate2";
 
 const NewPhotosPage = () => {
   const router = useRouter();
