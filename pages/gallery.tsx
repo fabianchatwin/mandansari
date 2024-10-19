@@ -48,8 +48,8 @@ export default function Intro() {
       customLabels: [],
     },
     WHATSAPP: {
-      subfolders: ["WHATSAPPPHOTOSATURDAY","WHATSAPPVIDEOSATURDAY", "SUNDAY","WHATSAPPVIDEOSUNDAY"],
-      customLabels: ["Saturday Photos", "Saturday Videos", "Sunday Photos", "Sunday Videos"],
+      subfolders: ["NEW", "WHATSAPPPHOTOSATURDAY","WHATSAPPVIDEOSATURDAY", "SUNDAY","WHATSAPPVIDEOSUNDAY"],
+      customLabels: ["✨New Photos✨","Saturday Photos", "Saturday Videos", "Sunday Photos", "Sunday Videos"],
     },
   };
 

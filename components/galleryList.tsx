@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SlideShow from "./slideshow";
 
 export default function GalleryList({ folder, onBack }) {
+
   const [items, setItems] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [isSlideshow, setIsSlideshow] = useState(false);
@@ -57,7 +58,8 @@ export default function GalleryList({ folder, onBack }) {
     GRANGUARDIA: 'https://photos.app.goo.gl/gWxZZc8GNcBZhMzv5',
     WHATSAPPPHOTOSATURDAY: 'https://photos.app.goo.gl/7g3zafrvA9AV2X5L6',
     WHATSAPPVIDEOSATURDAY: 'https://photos.app.goo.gl/9bTYAL8jJ99CatQY7',
-    WHATSAPPVIDEOSUNDAY: 'https://photos.app.goo.gl/KpVnNnhAn69CK3gCA'
+    WHATSAPPVIDEOSUNDAY: 'https://photos.app.goo.gl/KpVnNnhAn69CK3gCA',
+    NEW: 'https://photos.app.goo.gl/t3yqDR39nWZJCJQm7',
   };
 
   const googlePhotosLink = googlePhotosLinks[folder] || '#';
