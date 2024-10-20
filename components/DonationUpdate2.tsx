@@ -19,8 +19,8 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         </p>
         <h3>2. New Photos 📸</h3>
         <p>
-          We are excited to share that we've received new photo contributions! A big thank you to Brian, Mauro, and Claudia for your amazing additions! 
-          Please take a look at the <a href="/gallery?selectedFolder=NEW&showSubfolders=false">new additions</a>!
+        We are excited to announce that we’ve received some fantastic new photo contributions! Fun and spontaneous pictures capturing special moments and genuine expressions. Thank you to Brian, Mauro, and Claudia for sharing these wonderful additions!
+        Take a moment to explore the <a href="/gallery?selectedFolder=NEW&showSubfolders=false">new additions</a> in our gallery, guaranteed to bring a smile to your face!        
         </p>
         <p>
           We encourage anyone who would like to share more photos from our event to send them our way. We will keep them on this website as cherished memories for years to come.
@@ -53,7 +53,10 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         </p>
         <h3>2. Nuove foto 📸</h3>
         <p>
-          Siamo entusiasti di condividere che abbiamo ricevuto nuove foto! Un grande grazie a Brian, Mauro e Claudia per le vostre fantastiche aggiunte! Dai un'occhiata alle <a href="/gallery?selectedFolder=NEW&showSubfolders=false">nuove aggiunte</a>!
+        Siamo entusiasti di annunciare che abbiamo ricevuto dei fantastici nuovi contributi fotografici! 
+        Foto divertenti e spontanee che catturano momenti speciali e espressioni genuine. 
+        Grazie a Brian, Mauro e Claudia per aver condiviso queste meravigliose aggiunte!
+        Prendetevi un momento per esplorare le <a href="/gallery?selectedFolder=NEW&showSubfolders=false">nuove aggiunte</a> della nostra galleria che sapranno regalarvi un sorriso!
         </p>
         <p>
           Incoraggiamo chiunque voglia condividere ulteriori foto del nostro evento a inviarcele. Le conserveremo su questo sito come ricordi preziosi per gli anni a venire.

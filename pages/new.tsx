@@ -44,6 +44,9 @@ const NewPhotosPage = () => {
     setIsEnglish(!isEnglish);
   };
 
+  const handleNewClick = () => {
+    router.push("/gallery?selectedFolder=NEW&showSubfolders=falsegallery");
+  };
 
   const handleBackToButtons = () => {
     router.push("/gallery");
@@ -52,7 +55,7 @@ const NewPhotosPage = () => {
   return (
     <>
         <div className="container">
-            <div className="photo-wrapper" >
+            <div className="photo-wrapper" onClick={handleNewClick}>
                 <img
                     src={`https://media.fafalala.org/${images[currentIndex]}`}
                     className="front-image animating"
