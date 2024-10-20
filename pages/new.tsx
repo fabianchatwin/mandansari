@@ -64,10 +64,9 @@ const NewPhotosPage = () => {
                 />
             </div>
             <h1 className="content-intro">
-
-            <div className="">
-                <div className="ita">✨Half Year Aniversary!✨</div>
-            </div>
+                <div className="">
+                    <div className="ita">✨Half Year Aniversary!✨</div>
+                </div>
             </h1>            
             <div className="donation-button-container">
             <button onClick={toggleLanguage}>
@@ -75,12 +74,13 @@ const NewPhotosPage = () => {
                 <span className={isEnglish ? "ita-flag" : "ita-flag active"}>🇮🇹</span>
               </button>
             </div>
-
-            <DonationUpdate2 isEnglish={isEnglish} />
-            <section id="new-gallery" style={{ paddingTop: '100px', marginTop: '-100px' }}>
-                <GalleryList folder="NEW" onBack={handleBackToButtons} />
-            </section>
+            <div className="textLeft content-blog">
+                <DonationUpdate2 isEnglish={isEnglish} />
+            </div>
         </div>
+        <section id="new-gallery" style={{ paddingTop: '100px', marginTop: '-100px' }}>
+            <GalleryList folder="NEW" onBack={handleBackToButtons} />
+        </section>
     </>
   );
 };
