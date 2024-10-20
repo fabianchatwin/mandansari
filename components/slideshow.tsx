@@ -15,6 +15,8 @@ export default function SlideShow({ folder, startIndex = 0, onBack, paused = fal
       let response;
       if (folder === "BUFFETPARTY") {
         response = await fetch("/api/list-images?bucketName=wedding-buffetparty");
+      } else if (folder === "NEW") {
+        response = await fetch("/api/list-images?bucketName=wedding-new");
       } else {
         response = await fetch(`/api/cloudinary?folder=${folder}`);
       }
