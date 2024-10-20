@@ -19,9 +19,12 @@ export default function GalleryList({ folder, onBack }) {
         let response;
         if (folder === "BUFFETPARTY") {
           response = await fetch("/api/list-images?bucketName=wedding-buffetparty");
+        } else if (folder === "NEW") {
+          response = await fetch("/api/list-images?bucketName=wedding-new");
         } else {
           response = await fetch(`/api/cloudinary?folder=${folder}`);
         }
+
         const data = await response.json();
         setItems(data);
       }
