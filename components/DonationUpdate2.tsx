@@ -17,12 +17,10 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         <p>
           So many changes—family, settling in, work—everything is in motion and evolving, both as a couple and as individuals. It's a whirlwind, but we're embracing it!
         </p>
-        <p>
-          If you want to learn more about our journey, check out our <a href="https://medium.com/@fabianchatwin">Medium channel</a> 🙏.
-        </p>
         <h3>2. New Photos 📸</h3>
         <p>
-          We are excited to share that we've received new photo contributions! A big thank you to Brian, Mauro, and Claudia for your amazing additions! Please take a look at the <a href="/new">new additions</a>!
+          We are excited to share that we've received new photo contributions! A big thank you to Brian, Mauro, and Claudia for your amazing additions! 
+          Please take a look at the <a href="/gallery?selectedFolder=NEW&showSubfolders=false">new additions</a>!
         </p>
         <p>
           We encourage anyone who would like to share more photos from our event to send them our way. We will keep them on this website as cherished memories for years to come.
@@ -33,6 +31,9 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         </p>
         <p>
           However, we still need to wait ⏳ before we can transform your generous contributions into tangible support. We're navigating some personal decisions right now, but <strong>patience will guide us</strong>. We need to sort through our situation in Italy before we can return to Indonesia to help Maya and Nur embark on their new journey.
+        </p>
+        <p>
+          Please continue to follow our journey: via email, whatsapp group or our <a href="https://medium.com/@fabianchatwin">Medium channel</a> 🙏.
         </p>
         <p className="vert-space">
           With gratitude and love,
@@ -50,12 +51,9 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         <p>
           Così tanti cambiamenti: famiglia, sistemazione, lavoro—tutto è in movimento ed evolve, sia come coppia che come individui. È un vortice, ma lo stiamo abbracciando!
         </p>
-        <p>
-          Se vuoi saperne di più sul nostro viaggio, dai un'occhiata al nostro <a href="https://medium.com/@fabianchatwin">canale Medium</a> 🙏.
-        </p>
         <h3>2. Nuove foto 📸</h3>
         <p>
-          Siamo entusiasti di condividere che abbiamo ricevuto nuove foto! Un grande grazie a Brian, Mauro e Claudia per le vostre fantastiche aggiunte! Dai un'occhiata alle <a href="/new">nuove aggiunte</a>!
+          Siamo entusiasti di condividere che abbiamo ricevuto nuove foto! Un grande grazie a Brian, Mauro e Claudia per le vostre fantastiche aggiunte! Dai un'occhiata alle <a href="/gallery?selectedFolder=NEW&showSubfolders=false">nuove aggiunte</a>!
         </p>
         <p>
           Incoraggiamo chiunque voglia condividere ulteriori foto del nostro evento a inviarcele. Le conserveremo su questo sito come ricordi preziosi per gli anni a venire.
@@ -67,6 +65,9 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         <p>
           Tuttavia, dobbiamo ancora aspettare ⏳ prima di poter trasformare le vostre generose donazioni in un supporto concreto. Stiamo affrontando alcune decisioni personali in questo momento, ma <strong>la pazienza ci guiderà</strong>. Dobbiamo sistemare la nostra situazione in Italia prima di poter tornare in Indonesia per aiutare Maya e Nur a intraprendere il loro nuovo viaggio.
         </p>
+        <p>
+          Contina a seguire la nostra avventura: via email, gruppo whatsapp o il nostro <a href="https://medium.com/@fabianchatwin">canale Medium</a> 🙏.
+        </p>        
         <p className="vert-space">
           Con gratitudine e amore,
           <br /><br />
