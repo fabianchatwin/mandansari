@@ -27,7 +27,7 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         </p>
         <h3>3. Donation Update 💰</h3>
         <p>
-          We've received additional donations, and we now have a total of €9,374 set aside! They're safely maturing in the savings account for the time being.
+          We've received additional donations, and we now have a total of <strong>€9,374</strong> set aside! They're safely maturing in the savings account for the time being.
         </p>
         <p>
           However, we still need to wait ⏳ before we can transform your generous contributions into tangible support. We're navigating some personal decisions right now, but <strong>patience will guide us</strong>. We need to sort through our situation in Italy before we can return to Indonesia to help Maya and Nur embark on their new journey.
@@ -63,7 +63,7 @@ const DonationUpdate: React.FC<DonationProps> = ({ isEnglish }) => {
         </p>
         <h3>3. Aggiornamento sulle donazioni 💰</h3>
         <p>
-          Abbiamo ricevuto ulteriori donazioni e ora abbiamo un totale di 9.374 € messi da parte! Sono al sicuro in un conto di risparmio per il momento.
+          Abbiamo ricevuto ulteriori donazioni e ora abbiamo un totale di <strong>9.374 €</strong> messi da parte! Sono al sicuro in un conto di risparmio per il momento.
         </p>
         <p>
           Tuttavia, dobbiamo ancora aspettare ⏳ prima di poter trasformare le vostre generose donazioni in un supporto concreto. Stiamo affrontando alcune decisioni personali in questo momento, ma <strong>la pazienza ci guiderà</strong>. Dobbiamo sistemare la nostra situazione in Italia prima di poter tornare in Indonesia per aiutare Maya e Nur a intraprendere il loro nuovo viaggio.

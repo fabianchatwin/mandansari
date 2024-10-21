@@ -45,7 +45,7 @@ const NewPhotosPage = () => {
   };
 
   const handleNewClick = () => {
-    router.push("/gallery?selectedFolder=NEW&showSubfolders=falsegallery");
+    router.push("/gallery?selectedFolder=NEW&showSubfolders=false");
   };
 
   const handleBackToButtons = () => {
@@ -65,7 +65,7 @@ const NewPhotosPage = () => {
             </div>
             <h1 className="content-intro">
                 <div className="">
-                    <div className="ita">✨Half Year Aniversary!✨</div>
+                    <div className="ita">✨Half Year Anniversary!✨</div>
                 </div>
             </h1>            
             <div className="donation-button-container">
@@ -77,10 +77,16 @@ const NewPhotosPage = () => {
             <div className="textLeft content-blog">
                 <DonationUpdate2 isEnglish={isEnglish} />
             </div>
+            <div className="content-gallery">
+                <div className="gallery-button gallery-button-new" onClick={handleNewClick}>See the new Photos!</div>
+            </div>
+            <div className="footer-spacer">&nbsp;</div>
+            <div className="footer">
+                Fafalala is not an official organization (yet) but just a group of friends that want to do something good.
+                <br></br>
+                Reach us on gmail at fabianchatwin or liamandansari22.
+            </div>
         </div>
-        <section id="new-gallery" style={{ paddingTop: '100px', marginTop: '-100px' }}>
-            <GalleryList folder="NEW" onBack={handleBackToButtons} />
-        </section>
     </>
   );
 };
